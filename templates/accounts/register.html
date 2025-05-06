@@ -40,7 +40,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="log-in-page">
+    {% comment %} <div class="log-in-page">
       <img class="ce-1569-f-55-f-1" src="{% static 'image/register/ce-1569-f-55-f-10.png' %}" />
       <div class="frame-1000000791">
         <div class="line-4"></div>
@@ -63,6 +63,80 @@
           <span>
             <span class="already-have-a-account-login-span">Already have a account?</span>
             <span class="already-have-a-account-login-span2">Login</span>
+          </span>
+        </div>
+      </div>
+    </div> {% endcomment %}
+    <div class="log-in-page">
+      <img class="ce-1569-f-55-f-1" src="{% static 'image/register/ce-1569-f-55-f-10.png' %}" />
+      <div class="frame-1000000791">
+        {% comment %} <div class="line-4"></div>
+        <div class="line-41"></div>
+        <div class="line-5"></div>
+        <div class="line-6"></div>
+        <div class="line-7"></div> {% endcomment %}
+        <div class="create-account">Create Account</div>
+        <form method="post" action="{% url 'register' %}">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            <div class="form-errors">
+              {% for error in form.non_field_errors %}
+                <p class="error">{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <div class="form-group first-name">
+            <label for="{{ form.first_name.id_for_label }}">First Name</label>
+            {{ form.first_name }}
+            {% for error in form.first_name.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="form-group last-name">
+            <label for="{{ form.last_name.id_for_label }}">Last Name</label>
+            {{ form.last_name }}
+            {% for error in form.last_name.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email Address</label>
+            {{ form.email }}
+            {% for error in form.email.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">Username</label>
+            {{ form.username }}
+            {% for error in form.username.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            <label for="{{ form.password1.id_for_label }}">Password</label>
+            {{ form.password1 }}
+            {% for error in form.password1.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="form-group">
+            <label for="{{ form.password2.id_for_label }}">Confirm Password</label>
+            {{ form.password2 }}
+            {% for error in form.password2.errors %}
+              <p class="error">{{ error }}</p>
+            {% endfor %}
+          </div>
+          <div class="frame-105">
+            <button type="submit" class="create-account2" style="border:none; color:white; font-size:40px; font-family:'Montserrat-SemiBold'; cursor:pointer;">create</button>
+          </div>
+        </form>
+        <div class="already-have-a-account-login">
+          <span>
+            <span class="already-have-a-account-login-span">Already have a account?</span>
+            <span>
+              <a href="{% url 'user_login' %}" class="already-have-a-account-login-span2">Login</a>
+            </span>
           </span>
         </div>
       </div>
