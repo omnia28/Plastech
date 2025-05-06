@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/contact/style.css' %}" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+      
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contact-us">
+      <form class="info-required" action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div class="first-name">
+          <div class="frame-91">
+            <label for="first-name">*First Name</label><br />
+            <input type="text" id="first-name" name="first_name" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-912">
+            <label for="last-name">*Last Name</label><br />
+            <input type="text" id="last-name" name="last_name" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-913">
+            <label for="company">*Company</label><br />
+            <input type="text" id="company" name="company" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-914">
+            <label for="location">**Location</label><br />
+            <input type="text" id="location" name="location" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-915">
+            <label for="email">*Work Email Address</label><br />
+            <input type="email" id="email" name="work_email_address" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-916">
+            <label for="phone">*Phone Number</label><br />
+            <input type="tel" id="phone" name="phone_number" required />
+          </div>
+        </div>
+        <div class="first-name">
+          <div class="frame-917">
+            <label for="details">*Comment</label><br />
+            <textarea id="details" name="details" rows="1" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="button"><div class="button2">Contact</div></button>
+      </form>
+
+      <div class="as-a-pioneering-provider-of-innovative-water-monitoring-and-analysis-solutions-our-project-is-designed-to-help-industries-governments-and-communities-combat-water-pollution-while-advancing-sustainability-goals-through-advanced-sensor-technology-and-ai-driven-analysis-we-enable-real-time-detection-of-contaminants-like-microplastics-ensuring-cleaner-and-safer-water-for-all-our-approach-integrates-cutting-edge-technology-expert-driven-insights-and-user-friendly-platforms-to-deliver-comprehensive-water-quality-solutions-from-real-time-monitoring-to-actionable-insights-our-solutions-are-tailored-to-reduce-environmental-impact-and-safeguard-water-ecosystems-with-a-focus-on-sustainability-we-also-support-long-term-water-management-strategies-by-providing-data-driven-recommendations-for-pollution-prevention-resource-optimization-and-ecosystem-restoration-ready-to-discover-how-our-innovative-solutions-can-empower-your-water-sustainability-efforts-let-s-connect-and-create-a-cleaner-greener-future-together">
+        <span>
+          <span class="as-a-pioneering-provider-of-innovative-water-monitoring-and-analysis-solutions-our-project-is-designed-to-help-industries-governments-and-communities-combat-water-pollution-while-advancing-sustainability-goals-through-advanced-sensor-technology-and-ai-driven-analysis-we-enable-real-time-detection-of-contaminants-like-microplastics-ensuring-cleaner-and-safer-water-for-all-our-approach-integrates-cutting-edge-technology-expert-driven-insights-and-user-friendly-platforms-to-deliver-comprehensive-water-quality-solutions-from-real-time-monitoring-to-actionable-insights-our-solutions-are-tailored-to-reduce-environmental-impact-and-safeguard-water-ecosystems-with-a-focus-on-sustainability-we-also-support-long-term-water-management-strategies-by-providing-data-driven-recommendations-for-pollution-prevention-resource-optimization-and-ecosystem-restoration-ready-to-discover-how-our-innovative-solutions-can-empower-your-water-sustainability-efforts-let-s-connect-and-create-a-cleaner-greener-future-together-span">
+            As a pioneering provider of innovative water monitoring and analysis solutions, our project is designed to help industries, governments, and communities combat water pollution while advancing sustainability goals. Through advanced sensor technology and AI-driven analysis, we enable real-time detection of contaminants like microplastics, ensuring cleaner and safer water for all.
+            <br />
+            <br />
+            Our approach integrates cutting-edge technology, expert-driven insights, and user-friendly platforms to deliver comprehensive water quality solutions. From real-time monitoring to actionable insights, our solutions are tailored to reduce environmental impact and safeguard water ecosystems.
+            <br />
+            With a focus on sustainability, we also support long-term water management strategies by providing data-driven recommendations for pollution prevention, resource optimization, and ecosystem restoration.
+            <br />
+            <br />
+            Ready to discover how our innovative solutions can empower your water sustainability efforts?
+          </span>
+          <span class="as-a-pioneering-provider-of-innovative-water-monitoring-and-analysis-solutions-our-project-is-designed-to-help-industries-governments-and-communities-combat-water-pollution-while-advancing-sustainability-goals-through-advanced-sensor-technology-and-ai-driven-analysis-we-enable-real-time-detection-of-contaminants-like-microplastics-ensuring-cleaner-and-safer-water-for-all-our-approach-integrates-cutting-edge-technology-expert-driven-insights-and-user-friendly-platforms-to-deliver-comprehensive-water-quality-solutions-from-real-time-monitoring-to-actionable-insights-our-solutions-are-tailored-to-reduce-environmental-impact-and-safeguard-water-ecosystems-with-a-focus-on-sustainability-we-also-support-long-term-water-management-strategies-by-providing-data-driven-recommendations-for-pollution-prevention-resource-optimization-and-ecosystem-restoration-ready-to-discover-how-our-innovative-solutions-can-empower-your-water-sustainability-efforts-let-s-connect-and-create-a-cleaner-greener-future-together-span2">Let’s connect and create a cleaner, greener future together!</span>
+        </span>
+      </div>
+      <div class="solving-water-pollution-ensuring-environmental-sustainability">
+        Solving Water Pollution &amp; Ensuring
+        <br />
+        Environmental Sustainability
+      </div>
+      <div class="header">
+        <div class="frame-52">
+          <div class="logo">
+            <div class="frame-53"></div>
+          </div>
+        </div>
+        <div class="logo2">
+          <div class="frame-49">
+            <div class="frame-50">
+              <div class="frame-47">
+                <div class="frame-48">
+                  <img class="logo3" src="{% static 'image/contact/logo2.png' %}" />
+                  <img class="logo-text" src="{% static 'image/contact/logo-text0.png' %}" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header2">
+          <div class="frame-51">
+            <div class="frame-492">
+              <div class="nav">
+                <div class="nav2">
+                  <div class="home">Home</div>
+                  <div class="results">Results</div>
+                  <div class="blogs">Blogs</div>
+                  <div class="our-products">Our products</div>
+                  <div class="about">About</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sign-up">
+          <div class="frame-83">
+            <div class="frame-80">
+              <div class="frame-81">
+                <div class="vuesax-linear-profile-circle2">
+                  <div class="account-name">ACCOUNT NAME</div>
+                </div>
+                <div class="arrow-down">
+                  <img class="vuesax-bold-arrow-down" src="{% static 'image/contact/vuesax-bold-arrow-down0.svg' %}" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="frame-54">
+          <div class="frame-45">
+            <div class="frame-41">
+              <div class="contact-usct">
+                <span>
+                  <span class="contact-usct-span">CONTACT US</span>
+                  <span class="contact-usct-span2">CT</span>
+                </span>
+              </div>
+              <div class="frame-40">
+                <div class="frame-39">
+                  <div class="call">
+                    <img class="vuesax-linear-call" src="{% static 'image/contact/vuesax-linear-call0.svg' %}" />
+                  </div>
+                  <div class="_201276003504">+201276003504</div>
+                </div>
+                <div class="frame-38">
+                  <div class="location2">
+                    <img class="vuesax-bold-location" src="{% static 'image/contact/vuesax-bold-location0.svg' %}" />
+                  </div>
+                  <div class="alexandria-egypt">Alexandria , Egypt</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-44">
+              <div class="follow-us">Follow Us:</div>
+              <div class="frame-42">
+                <img class="linkedin" src="{% static 'image/contact/linkedin0.svg' %}" />
+                <img class="facebook" src="{% static 'image/contact/facebook0.svg' %}" />
+                <img class="instagram" src="{% static 'image/contact/instagram0.svg' %}" />
+                <img class="twitter" src="{% static 'image/contact/twitter0.svg' %}" />
+              </div>
+            </div>
+          </div>
+          <div class="frame-46">
+            <div class="about-us">About Us</div>
+            <div class="blogs2">Blogs</div>
+            <div class="results2">Results</div>
+            <div class="contact-us2">Contact Us</div>
+          </div>
+        </div>
+        <img class="logo4" src="{% static 'image/contact/logo3.png' %}" />
+        <img class="logo-text2" src="{% static 'image/contact/logo-text1.png' %}" />
+        <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+      </div>
+      <img class="mask-group" src="{% static 'image/contact/mask-group0.svg' %}" />
+      <div class="contct-us">
+        <div class="contact-us3">Contact Us</div>
+      </div>
+    </div>
+  </body>
+</html>

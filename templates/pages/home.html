@@ -1,0 +1,372 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/home/style.css' %}">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="home-page">
+    <img class="image-5" src="{% static 'image/home/image-50.png' %}" />
+    <div class="slider-1">
+      <img class="image" src="{% static 'image/home/image0.png' %}" />
+      <div class="rectangle-2"></div>
+    </div>
+    <div class="header">
+      <div class="frame-52">
+        <div class="logo">
+          <div class="frame-53">
+            <div class="header2">
+              <div class="frame-51">
+                <div class="frame-49">
+                  <div class="nav">
+                    <div class="nav2">
+                      <div><a href="{% url 'home' %}" class="home">Home</a></div>
+                      <div class="results">Results</div>
+                      <div><a href="{% url 'blogs' %}" class="blogs">Blogs</a></div>
+                      <div class="our-products">Our products</div>
+                      <div><a href="{% url 'about' %}" class="about">About</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sign-up">
+                <div class="button">
+                  <div><a href="{% url 'register' %}" class="button2">Sign Up</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="logo2">
+        <div class="frame-492">
+          <div class="frame-50">
+            <div class="frame-47">
+              <div class="frame-48">
+                <img class="logo3" src="{% static 'image/home/logo2.png' %}" />
+                <img class="logo-text" src="{% static 'image/home/logo-text0.png' %}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="rectangle-3"></div>
+      <div class="revolutionizing-water-purity-detection-with-ai">
+        Revolutionizing Water
+        <br />
+        Purity Detection with AI
+      </div>
+      <div
+        class="advanced-sensors-and-ai-working-together-to-detect-microplastics-in-water"
+      >
+        Advanced sensors and AI working together
+        <br />
+        to detect microplastics in water
+      </div>
+      <div class="button3">
+        <div class="button2">Get Started</div>
+      </div>
+      <div class="button4">
+        <div class="button5">Learn More</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="frame-54">
+        <div class="frame-45">
+          <div class="frame-41">
+            <div class="contact-usct">
+              <span>
+                <span class="contact-usct-span">CONTACT US</span>
+                <span class="contact-usct-span2">CT</span>
+              </span>
+            </div>
+            <div class="frame-40">
+              <div class="frame-39">
+                <div class="call">
+                  <img class="vuesax-linear-call" src="{% static 'image/home/vuesax-linear-call0.svg' %}" />
+                </div>
+                <div class="_201276003504">+201276003504</div>
+              </div>
+              <div class="frame-38">
+                <div class="location">
+                  <img
+                    class="vuesax-bold-location"
+                    src="{% static 'image/home/vuesax-bold-location0.svg' %}"
+                  />
+                </div>
+                <div class="alexandria-egypt">Alexandria , Egypt</div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-44">
+            <div class="follow-us">Follow Us:</div>
+            <div class="frame-42">
+              <img class="linkedin" src="{% static 'image/home/linkedin0.svg' %}" />
+              <img class="facebook" src="{% static 'image/home/facebook0.svg' %}" />
+              <img class="instagram" src="{% static 'image/home/instagram0.svg' %}" />
+              <img class="twitter" src="{% static 'image/home/twitter0.svg' %}" />
+            </div>
+          </div>
+        </div>
+        <div class="frame-46">
+          <div><a href="{% url 'about' %}" class="about-us">About Us</a></div>
+          <div class="blogs2">Blogs</div>
+          <div class="results2">Results</div>
+          <div><a href="{% url 'contact' %}" class="contact-us">Contact Us</a></div>
+        </div>
+      </div>
+      <img class="logo4" src="{% static 'image/home/logo3.png' %}" />
+      <img class="logo-text2" src="{% static 'image/home/logo-text1.png' %}" />
+      <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+    </div>
+    <img class="abstract-background" src="{% static 'image/home/abstract-background0.png' %}" />
+    <div class="why-choose-our-solution">Why Choose Our Solution?</div>
+    <div class="frame-5">
+      <div class="frame-6">
+        <div class="real-time-detection">Real-time Detection</div>
+        <div class="monitor-microplastic-levels-instantly-with-precise-readings">
+          Monitor microplastic levels instantly with precise readings
+        </div>
+      </div>
+      <div class="frame-55">
+        <img
+          class="leonardo-phoenix-10-a-sleek-modern-and-minimalist-logo-featuri-3-1"
+          src="{% static 'image/home/leonardo-phoenix-10-a-sleek-modern-and-minimalist-logo-featuri-3-10.png' %}"
+        />
+      </div>
+    </div>
+    <div class="frame-62">
+      <div class="frame-6">
+        <div class="ai-precision">AI Precision</div>
+        <div class="advanced-ai-ensuring-98-detection-accuracy">
+          Advanced AI ensuring 98% detection accuracy
+        </div>
+      </div>
+      <div class="frame-552">
+        <img
+          class="leonardo-phoenix-10-a-futuristic-hightech-illustration-of-an-a-0-1"
+          src="{% static 'image/home/leonardo-phoenix-10-a-futuristic-hightech-illustration-of-an-a-0-10.png' %}"
+        />
+      </div>
+    </div>
+    <div class="frame-7">
+      <div class="frame-6">
+        <div class="sustainable-impact">Sustainable Impact</div>
+        <div class="minimize-pollution-with-innovative-technology">
+          Minimize pollution with innovative technology
+        </div>
+      </div>
+      <div class="frame-552">
+        <img
+          class="leonardo-phoenix-10-a-stylized-vibrant-and-modern-a-igenerated-2-1"
+          src="{% static 'image/home/leonardo-phoenix-10-a-stylized-vibrant-and-modern-a-igenerated-2-10.png' %}"
+        />
+      </div>
+    </div>
+    <div class="frame-56">
+      <img class="image-8" src="{% static 'image/home/image-80.png' %}" />
+      <div
+        class="through-cutting-edge-technology-we-re-addressing-the-urgent-issue-of-water-contamination-by-detecting-microplastics-with-unparalleled-precision-every-analysis-brings-us-closer-to-a-cleaner-healthier-environment-emphasizing-the-importance-of-innovation-and-sustainability-in-safeguarding-our-planet-s-most-vital-resource"
+      >
+        Through cutting-edge technology, we’re addressing the urgent issue of
+        water contamination by detecting microplastics with unparalleled
+        precision.
+        <br />
+        <br />
+        Every analysis brings us closer to a cleaner, healthier environment,
+        emphasizing the importance of innovation and sustainability in
+        safeguarding our planet’s most vital resource.
+      </div>
+      <div class="frame-68">
+        <img class="frame-70" src="{% static 'image/home/frame-700.svg' %}" />
+        <div class="_1-250-000-liters">1,250,000 Liters</div>
+        <div class="water-analyzed">Water Analyzed</div>
+      </div>
+      <div class="frame-69">
+        <div class="frame-702">
+          <div class="_98">98%</div>
+          <img class="line-1" src="{% static 'image/home/line-10.svg' %}" />
+          <div class="detection-accuracy">Detection Accuracy</div>
+        </div>
+      </div>
+      <div class="frame-703">
+        <div class="frame-704">
+          <div class="_100-000">+100,000</div>
+          <img class="line-12" src="{% static 'image/home/line-11.svg' %}" />
+          <div class="microplastics-detected">Microplastics Detected</div>
+        </div>
+      </div>
+    </div>
+    <div class="making-a-measurable-impact">Making a Measurable Impact</div>
+    <div class="blog-slider">
+      <img class="image-9" src="{% static 'image/home/image-90.png' %}" />
+      <div class="frame-64">
+        <div
+          class="our-approach-combines-cutting-edge-technology-unrivaled-expertise-world-class-services-and-flexible-financing-options-to"
+        >
+          Our approach combines cutting-edge technology, unrivaled expertise,
+          world-class services, and flexible financing options to
+        </div>
+      </div>
+      <div class="frame-80">
+        <div class="blog-card">
+          <div class="frame-72">
+            <img class="image-1" src="{% static 'image/home/image-10.png' %}" />
+          </div>
+          <div class="frame-77">
+            <div class="ai-revolution-in-water-sustainability">
+              AI Revolution in Water Sustainability
+            </div>
+            <div class="frame-76">
+              <div class="frame-75">
+                <div class="frame-78">
+                  <div
+                    class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability"
+                  >
+                    The intersection of artificial intelligence (AI) and water
+                    sustainability has ushered in a new era of environmental
+                    innovation.(AI) and water sustainability
+                  </div>
+                  <div class="frame-79">
+                    <div class="read-more">Read more</div>
+                    <div class="line-arrow-right">
+                      <img
+                        class="vuesax-linear-arrow-right"
+                        src="{% static 'image/home/vuesax-linear-arrow-right0.svg' %}"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-74">
+                <img class="image2" src="{% static 'image/home/image1.png' %}" />
+                <div class="frame-73">
+                  <div class="joe-gerlad">Joe Gerlad</div>
+                  <div class="_20-jan-2025">20 Jan 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="frame-72">
+            <img class="image-1" src="{% static 'image/home/image-11.png' %}" />
+          </div>
+          <div class="frame-77">
+            <div class="ai-revolution-in-water-sustainability">
+              AI Revolution in Water Sustainability
+            </div>
+            <div class="frame-76">
+              <div class="frame-75">
+                <div class="frame-78">
+                  <div
+                    class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability"
+                  >
+                    The intersection of artificial intelligence (AI) and water
+                    sustainability has ushered in a new era of environmental
+                    innovation.(AI) and water sustainability
+                  </div>
+                  <div class="frame-79">
+                    <div class="read-more">Read more</div>
+                    <div class="line-arrow-right">
+                      <img
+                        class="vuesax-linear-arrow-right2"
+                        src="{% static 'image/home/vuesax-linear-arrow-right1.svg' %}"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-74">
+                <img class="image2" src="{% static 'image/home/image2.png' %}" />
+                <div class="frame-73">
+                  <div class="joe-gerlad">Joe Gerlad</div>
+                  <div class="_20-jan-2025">20 Jan 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="frame-72">
+            <img class="image-1" src="{% static 'image/home/image-12.png' %}" />
+          </div>
+          <div class="frame-77">
+            <div class="ai-revolution-in-water-sustainability">
+              AI Revolution in Water Sustainability
+            </div>
+            <div class="frame-76">
+              <div class="frame-75">
+                <div class="frame-78">
+                  <div
+                    class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability"
+                  >
+                    The intersection of artificial intelligence (AI) and water
+                    sustainability has ushered in a new era of environmental
+                    innovation.(AI) and water sustainability
+                  </div>
+                  <div class="frame-79">
+                    <div class="read-more">Read more</div>
+                    <div class="line-arrow-right">
+                      <img
+                        class="vuesax-linear-arrow-right3"
+                        src="{% static 'image/home/vuesax-linear-arrow-right2.svg' %}"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-74">
+                <img class="image2" src="{% static 'image/home/image3.png' %}" />
+                <div class="frame-73">
+                  <div class="joe-gerlad">Joe Gerlad</div>
+                  <div class="_20-jan-2025">20 Jan 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-82">
+        <div class="our-latest-blog">Our Latest Blog</div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

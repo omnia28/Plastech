@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/login/style.css' %}">
+  <title>Login Page</title>
+</head>
+<body>
+
+<div class="sign-up-page">
+  <img class="image-18" src="{% static 'image/login/image-180.png' %}" alt="Background" />
+  <div class="image"></div>
+
+  <div class="together-for-clean-waters">Together for<br>Clean Waters</div>
+  <div class="let-save-the-earth">Let's save the earth</div>
+  <div class="login2">Login</div>
+
+  <div class="welcome-black-please-login-to-your-account">
+    Welcome back! Please login to<br>your account
+  </div>
+
+  <form class="main-form" action="{% url 'user_login' %}" method="POST">
+    {% csrf_token %}
+    <div class="user-name">User Name</div>
+    <div class="frame-102">
+      {{ form.username }}
+    </div>
+
+    <div class="password">Password</div>
+    <div class="frame-103">
+      {{ form.password }}
+    </div>
+
+
+    <div class="forget-password">
+      <a href="#">Forget password?</a>
+    </div>
+
+    <div class="frame-105">
+      <button type="submit" class="login" style="background:none; border:none; color:white; font-size:40px; font-family:'Montserrat-SemiBold'; cursor:pointer;">
+        Login
+      </button>
+    </div>
+
+    <div class="or-sign-in-with">Or Sign in With</div>
+
+    <div class="ellipse-11"></div>
+    <div class="ellipse-12"></div>
+
+    <div class="new-user">New User?</div>
+  </form>
+
+</div>
+
+</body>
+</html>

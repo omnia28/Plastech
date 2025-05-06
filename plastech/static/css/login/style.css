@@ -1,0 +1,229 @@
+.sign-up-page,
+.sign-up-page * {
+  box-sizing: border-box;
+}
+.sign-up-page {
+  background: #ffffff;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.image-18 {
+  border-radius: 28px;
+  width: 722px;
+  height: 1024px;
+  position: absolute;
+  left: -2px;
+  top: 0px;
+  object-fit: cover;
+}
+.image {
+  background: linear-gradient(
+    200.43deg,
+    rgba(9, 16, 87, 0.25) 0%,
+    rgba(75, 187, 181, 0.5) 100%
+  );
+  border-radius: var(--corner-extra-large, 28px);
+  width: 741px;
+  height: 1024px;
+  position: absolute;
+  left: 720px;
+  top: 0px;
+  box-shadow: -11px 16px 4px 0px rgba(0, 0, 0, 0.25);
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.together-for-clean-waters {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 700;
+  position: absolute;
+  left: 135px;
+  top: 66px;
+  -webkit-text-stroke: 4px var(--primary-400, #0b1928);
+}
+.welcome-black-please-login-to-your-account {
+  color: #4e4e4e;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 600;
+  position: absolute;
+  left: 823px;
+  top: 219px;
+}
+.let-save-the-earth {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 600;
+  position: absolute;
+  left: 269px;
+  top: 918px;
+  width: 203px;
+}
+.frame-102 {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--text-style-300, #4e4e4e);
+  border-width: 1px;
+  width: 504px;
+  height: 74px;
+  position: absolute;
+  left: 828px;
+  top: 377px;
+  overflow: hidden;
+}
+.full-name {
+  color: var(--text-style-300, #4e4e4e);
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  position: absolute;
+  left: 828px;
+  top: 337px;
+}
+.password {
+  color: var(--text-style-300, #4e4e4e);
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  position: absolute;
+  left: 828px;
+  top: 492px;
+}
+.new-user {
+  color: var(--text-style-300, #4e4e4e);
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  position: absolute;
+  left: 828px;
+  top: 914px;
+}
+.sign-up {
+  color: #091057;
+  text-align: center;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 700;
+  position: absolute;
+  left: 949px;
+  top: 914px;
+}
+.or-sign-in-with {
+  color: var(--text-style-300, #4e4e4e);
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 500;
+  position: absolute;
+  left: 1031px;
+  top: 829px;
+}
+.forget-password {
+  color: var(--text-style-300, #4e4e4e);
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 500;
+  position: absolute;
+  left: 1199px;
+  top: 661px;
+}
+.frame-103 {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--text-style-300, #4e4e4e);
+  border-width: 1px;
+  width: 504px;
+  height: 74px;
+  position: absolute;
+  left: 828px;
+  top: 534px;
+  overflow: hidden;
+}
+.frame-104 {
+  border-radius: 9px;
+  border-style: solid;
+  border-color: #4e4e4e;
+  border-width: 1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 828px;
+  top: 657px;
+  overflow: hidden;
+}
+.frame-105 {
+  background: var(
+    --gradient-1,
+    linear-gradient(
+      200.43deg,
+      rgba(75, 187, 181, 1) 0%,
+      rgba(9, 16, 87, 1) 98.27224016189575%
+    )
+  );
+  border-radius: 9px;
+  width: 507px;
+  height: 83px;
+  position: absolute;
+  left: 828px;
+  top: 713px;
+  overflow: hidden;
+}
+.login {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 600;
+  position: absolute;
+  left: 188px;
+  top: 18px;
+}
+.login2 {
+  color: var(--primary-300, #224a77);
+  text-align: center;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 600;
+  position: absolute;
+  left: 827px;
+  top: 130px;
+}
+.ellipse-11 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 1049px;
+  top: 860px;
+}
+.ellipse-12 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 1090px;
+  top: 860px;
+}

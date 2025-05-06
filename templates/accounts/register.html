@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="{% static 'css/register/style.css' %}" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+      
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="log-in-page">
+      <img class="ce-1569-f-55-f-1" src="{% static 'image/register/ce-1569-f-55-f-10.png' %}" />
+      <div class="frame-1000000791">
+        <div class="line-4"></div>
+        <div class="line-5"></div>
+        <div class="line-6"></div>
+        <div class="line-7"></div>
+        <form method="post">
+          {% csrf_token %}
+          <label for="{{ form.first_name.id_for_label }}">Full Name</label>
+          <div class="full-name">{{ form.first_name }}</div>
+          <div class="email-address">{{ form.email }}</div>
+          <div class="password">{{ form.password }}</div>
+          <div class="password2">{{ form.password2 }}</div>
+          <div class="create-account">Create Account</div>
+          <div class="frame-105">
+            <button type="submit" class="create-account2" style=" border:none; color:white; font-size:40px; font-family:'Montserrat-SemiBold'; cursor:pointer;">create</button>
+          </div>
+        </form>
+        <div class="already-have-a-account-login">
+          <span>
+            <span class="already-have-a-account-login-span">Already have a account?</span>
+            <span class="already-have-a-account-login-span2">Login</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
