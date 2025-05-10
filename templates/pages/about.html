@@ -1,253 +1,229 @@
-{%load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/about/style.css' %}">
-  
-  
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="about-page">
-    <div class="header">
-      <div class="header2">
-        <div class="frame-52">
-          <div class="logo">
-            <div class="frame-53">
-              <div class="header3">
-                <div class="frame-51">
-                  <div class="frame-49">
-                    <div class="nav">
-                      <div class="nav2">
-                        <div><a href="{% url 'home' %}" class="home">Home</a></div>
-                        <div class="results">Results</div>
-                        <div><a href="{% url 'blogs' %}" class="blogs">Blogs</a></div>
-                        <div class="our-products">Our products</div>
-                        <div class="about">About</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/about/style.css' %}" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+      
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <link rel="icon" href="{% static 'image/about/logo2.png' %}" type="image/png" />
+    <title>About</title>
+  </head>
+  <body>
+    <div class="about-page">
+      <div class="header">
+        <div class="header2">
+          <div class="frame-52">
+            <div class="logo">
+              <div class="frame-53">
+                <div class="header3">
+                  <div class="frame-51">
+                    <div class="frame-49">
+                      <div class="nav">
+                        <div class="nav2">
+                          <div>
+                            <a href="{% url 'home' %}" class="home">Home</a>
+                          </div>
+                          <div class="results">Results</div>
+                          <div>
+                            <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
+                          </div>
+                          <div class="our-products">Our products</div>
+                          <div class="about">About</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div>
-                  {% if user.is_authenticated %}
-                    <div class="sign-up2">
-                      <div class="frame-83">
-                        <div class="frame-801">
-                          <div class="frame-81">
-                            <div class="vuesax-linear-profile-circle2">
-                              <div class="account-name">{{ user.username }}</div>
-                            </div>
-                            <div class="arrow-down">
-                              <img class="vuesax-bold-arrow-down" src="{% static 'image/contact/vuesax-bold-arrow-down0.svg' %}" />
+                  <div>
+                    {% if user.is_authenticated %}
+                      <div class="sign-up2">
+                        <div class="frame-83">
+                          <div class="frame-801">
+                            <div class="frame-81">
+                              <div class="vuesax-linear-profile-circle2">
+                                <div class="account-name">{{ user.username }}</div>
+                              </div>
+                              <div class="arrow-down">
+                                <img class="vuesax-bold-arrow-down" src="{% static 'image/contact/vuesax-bold-arrow-down0.svg' %}" />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    {% comment %} <div>
-                      <a href="{% url 'logout' %}" class="logout">Logout</a>
-                    </div> {% endcomment %}
-                  {% else %}
-                    <div class="sign-up">
-                      <div class="button">
-                        <a href="{% url 'register' %}" class="button2">Sign Up</a>
+                      {% comment %} <div>
+                        <a href="{% url 'logout' %}" class="logout">Logout</a>
+                      </div> {% endcomment %}
+                    {% else %}
+                      <div class="sign-up">
+                        <div class="button">
+                          <a href="{% url 'register' %}" class="button2">Sign Up</a>
+                        </div>
                       </div>
-                    </div>
-                  {% endif %}
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="logo2">
-          <div class="frame-492">
-            <div class="frame-50">
-              <div class="frame-47">
-                <div class="frame-48">
-                  <img class="logo3" src="{% static 'image/about/logo2.png' %}" />
-                  <img class="logo-text" src="{% static 'image/about/logo-text0.png' %}" />
+          <div class="logo2">
+            <div class="frame-492">
+              <div class="frame-50">
+                <div class="frame-47">
+                  <div class="frame-48">
+                    <img class="logo3" src="{% static 'image/about/logo2.png' %}" />
+                    <img class="logo-text" src="{% static 'image/about/logo-text0.png' %}" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="about-us-section">
-      <img class="about2" src="{% static 'image/about/about1.png' %}" />
-      <div class="frame-85"></div>
-      <div class="about-us">About US</div>
-    </div>
-    <div class="rectangle-6"></div>
-    <div class="rectangle-7"></div>
-    <div
-      class="our-mission-is-to-revolutionize-water-purity-detection-through-the-innovative-integration-of-ai-and-advanced-sensor-technology-empowering-communities-and-industries-to-tackle-microplastic-pollution-for-a-healthier-more-sustainable-future"
-    >
-      Our mission is to revolutionize water purity detection through the
-      innovative integration of AI and advanced sensor technology, empowering
-      communities and industries to tackle microplastic pollution for a healthier,
-      more sustainable future.
-    </div>
-    <div class="our-mission">
-      <div class="our-mission2">Our Mission</div>
-    </div>
-    <div class="photo-1-our-mission">
-      <div class="photo-2-our-mission">
-        <img class="image-15" src="{% static 'image/about/image-150.png' %}" />
+      <div class="about-us-section">
+        <img class="about2" src="{% static 'image/about/about1.png' %}" />
+        <div class="frame-85"></div>
+        <div class="about-us">About US</div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="frame-54">
-        <div class="frame-45">
-          <div class="frame-41">
-            <div class="contact-usct">
-              <span>
-                <span class="contact-usct-span">CONTACT US</span>
-                <span class="contact-usct-span2">CT</span>
-              </span>
-            </div>
-            <div class="frame-40">
-              <div class="frame-39">
-                <div class="call">
-                  <img class="vuesax-linear-call" src="{% static 'image/about/vuesax-linear-call0.svg' %}" />
-                </div>
-                <div class="_201276003504">+201276003504</div>
+      <div class="rectangle-6"></div>
+      <div class="rectangle-7"></div>
+      <div class="our-mission-is-to-revolutionize-water-purity-detection-through-the-innovative-integration-of-ai-and-advanced-sensor-technology-empowering-communities-and-industries-to-tackle-microplastic-pollution-for-a-healthier-more-sustainable-future">Our mission is to revolutionize water purity detection through the innovative integration of AI and advanced sensor technology, empowering communities and industries to tackle microplastic pollution for a healthier, more sustainable future.</div>
+      <div class="our-mission">
+        <div class="our-mission2">Our Mission</div>
+      </div>
+      <div class="photo-1-our-mission">
+        <div class="photo-2-our-mission">
+          <img class="image-15" src="{% static 'image/about/image-150.png' %}" />
+        </div>
+      </div>
+      <div class="footer">
+        <div class="frame-54">
+          <div class="frame-45">
+            <div class="frame-41">
+              <div class="contact-usct">
+                <span>
+                  <span class="contact-usct-span">CONTACT US</span>
+                  <span class="contact-usct-span2">CT</span>
+                </span>
               </div>
-              <div class="frame-38">
-                <div class="location">
-                  <img
-                    class="vuesax-bold-location"
-                    src="{% static 'image/about/vuesax-bold-location0.svg' %}"
-                  />
+              <div class="frame-40">
+                <div class="frame-39">
+                  <div class="call">
+                    <img class="vuesax-linear-call" src="{% static 'image/about/vuesax-linear-call0.svg' %}" />
+                  </div>
+                  <div class="_201276003504">+201276003504</div>
                 </div>
-                <div class="alexandria-egypt">Alexandria , Egypt</div>
+                <div class="frame-38">
+                  <div class="location">
+                    <img class="vuesax-bold-location" src="{% static 'image/about/vuesax-bold-location0.svg' %}" />
+                  </div>
+                  <div class="alexandria-egypt">Alexandria , Egypt</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="frame-44">
-            <div class="follow-us">Follow Us:</div>
-            <div class="frame-42">
+            <div class="frame-44">
+              <div class="follow-us">Follow Us:</div>
+              <div class="frame-42">
                 <img class="linkedin" src="{% static 'image/about/linkedin0.svg' %}" />
                 <img class="facebook" src="{% static 'image/about/facebook0.svg' %}" />
                 <img class="instagram" src="{% static 'image/about/instagram0.svg' %}" />
                 <img class="twitter" src="{% static 'image/about/twitter0.svg' %}" />
+              </div>
             </div>
-            </div>
-        </div>
-        <div class="frame-46">
+          </div>
+          <div class="frame-46">
             <div class="about-us2">About Us</div>
             <div class="blogs2">Blogs</div>
             <div class="results2">Results</div>
             <div class="contact-us">Contact Us</div>
+          </div>
+        </div>
+        <img class="logo4" src="{% static 'image/about/logo3.png' %}" />
+        <img class="logo-text2" src="{% static 'image/about/logo-text1.png' %}" />
+        <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+      </div>
+      <div class="meet-our-team">
+        <img class="ce-1569-f-55-f-1" src="ce-1569-f-55-f-10.png" />
+        <div class="meet-our-team2">Meet Our Team</div>
+        <div class="partner-with-our-team-of-scientists-thinkers-and-industry-experts-to-take-your-talent-strategy-to-the-next-level-we-have-consulted-with-the-world-s-top-minds-and-created-innovative-solutions-that-transform-talent">Partner with our team of scientists, thinkers and industry experts to take your talent strategy to the next level. We have consulted with the world&#039;s top minds and created innovative solutions that transform talent</div>
+        <div class="image">
+          <img class="image2" src="{% static 'image/about/image1.png' %}" />
+        </div>
+        <div class="image3">
+          <img class="image2" src="{% static 'image/about/image3.png' %}" />
+        </div>
+        <div class="image4">
+          <img class="image2" src="{% static 'image/about/image5.png' %}" />
+        </div>
+        <div class="image5">
+          <img class="image2" src="{% static 'image/about/image7.png' %}" />
+        </div>
+        <div class="image6">
+          <img class="image2" src="{% static 'image/about/image9.png' %}" />
+        </div>
+        <div class="image7">
+          <img class="image2" src="{% static 'image/about/image11.png' %}" />
+        </div>
+        <div class="image8">
+          <img class="image2" src="{% static 'image/about/image13.png' %}" />
+        </div>
+        <div class="image9">
+          <img class="image2" src="{% static 'image/about/image15.png' %}" />
         </div>
       </div>
-      <img class="logo4" src="{% static 'image/about/logo3.png' %}" />
-      <img class="logo-text2" src="{% static 'image/about/logo-text1.png' %}" />
-      <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+      <div class="frame-13">
+        <div class="frame-10">
+          <img class="image-3" src="{% static 'image/about/image-30.png' %}" />
+          <div class="ellipse-2"></div>
+          <div class="_1">1</div>
+          <div class="water-sensors">Water Sensors</div>
+          <div class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
+        </div>
+        <div class="frame-132">
+          <img class="image-16" src="{% static 'image/about/image-160.png' %}" />
+          <div class="ellipse-2"></div>
+          <div class="_2">2</div>
+          <div class="ai-model">AI model</div>
+          <div class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
+        </div>
+        <div class="frame-14">
+          <img class="image-3" src="{% static 'image/about/image-31.png' %}" />
+          <div class="ellipse-2"></div>
+          <div class="_3">3</div>
+          <div class="real-time-data">Real time data</div>
+          <div class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
+        </div>
+      </div>
+      <div class="how-it-works2">How It Works</div>
     </div>
-    <div class="meet-our-team">
-      <img class="ce-1569-f-55-f-1" src="ce-1569-f-55-f-10.png" />
-      <div class="meet-our-team2">Meet Our Team</div>
-      <div
-        class="partner-with-our-team-of-scientists-thinkers-and-industry-experts-to-take-your-talent-strategy-to-the-next-level-we-have-consulted-with-the-world-s-top-minds-and-created-innovative-solutions-that-transform-talent"
-      >
-        Partner with our team of scientists, thinkers and industry experts to take
-        your talent strategy to the next level. We have consulted with the
-        world&#039;s top minds and created innovative solutions that transform
-        talent
-      </div>
-      <div class="image">
-        <img class="image2" src="{% static 'image/about/image1.png' %}" />
-      </div>
-      <div class="image3">
-        <img class="image2" src="{% static 'image/about/image3.png' %}" />
-      </div>
-      <div class="image4">
-        <img class="image2" src="{% static 'image/about/image5.png' %}" />
-      </div>
-      <div class="image5">
-        <img class="image2" src="{% static 'image/about/image7.png' %}" />
-      </div>
-      <div class="image6">
-        <img class="image2" src="{% static 'image/about/image9.png' %}" />
-      </div>
-      <div class="image7">
-        <img class="image2" src="{% static 'image/about/image11.png' %}" />
-      </div>
-      <div class="image8">
-        <img class="image2" src="{% static 'image/about/image13.png' %}" />
-      </div>
-      <div class="image9">
-        <img class="image2" src="{% static 'image/about/image15.png' %}" />
-      </div>
-    </div>
-    <div class="frame-13">
-      <div class="frame-10">
-        <img class="image-3" src="{% static 'image/about/image-30.png' %}" />
-        <div class="ellipse-2"></div>
-        <div class="_1">1</div>
-        <div class="water-sensors">Water Sensors</div>
-        <div
-          class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-        >
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-        </div>
-      </div>
-      <div class="frame-132">
-        <img class="image-16" src="{% static 'image/about/image-160.png' %}" />
-        <div class="ellipse-2"></div>
-        <div class="_2">2</div>
-        <div class="ai-model">AI model</div>
-        <div
-          class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-        >
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-        </div>
-      </div>
-      <div class="frame-14">
-        <img class="image-3" src="{% static 'image/about/image-31.png' %}" />
-        <div class="ellipse-2"></div>
-        <div class="_3">3</div>
-        <div class="real-time-data">Real time data</div>
-        <div
-          class="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-        >
-          hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-        </div>
-      </div>
-    </div>
-    <div class="how-it-works2">How It Works</div>
-  </div>
-  
-</body>
+  </body>
 </html>

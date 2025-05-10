@@ -36,7 +36,8 @@
         padding: 0;
       }
     </style>
-    <title>Document</title>
+    <link rel="icon" href="{% static 'image/home/logo2.png' %}" type="image/png" />
+    <title>Home</title>
   </head>
   <body>
     <div class="home-page">
@@ -58,14 +59,14 @@
                           <a href="{% url 'home' %}" class="home">Home</a>
                         </div>
                         <div class="results">
-                          {% if user.is_authenticated %}
-                            <a class="results">Results</a>
-                          {% endif %}
+                          <a class="results">Results</a>
                         </div>
                         <div>
                           <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
                         </div>
-                        <div class="our-products">Our products</div>
+                        <div>
+                          <a href="{% url 'products' %}" class="our-products">Our products</a>
+                        </div>
                         <div>
                           <a href="{% url 'about' %}" class="about">About</a>
                         </div>
@@ -250,90 +251,38 @@
           <div class="our-approach-combines-cutting-edge-technology-unrivaled-expertise-world-class-services-and-flexible-financing-options-to">Our approach combines cutting-edge technology, unrivaled expertise, world-class services, and flexible financing options to</div>
         </div>
         <div class="frame-80">
-          <div class="blog-card">
-            <div class="frame-72">
-              <img class="image-1" src="{% static 'image/home/image-10.png' %}" />
-            </div>
-            <div class="frame-77">
-              <div class="ai-revolution-in-water-sustainability">AI Revolution in Water Sustainability</div>
-              <div class="frame-76">
-                <div class="frame-75">
-                  <div class="frame-78">
-                    <div class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability">The intersection of artificial intelligence (AI) and water sustainability has ushered in a new era of environmental innovation.(AI) and water sustainability</div>
-                    <div class="frame-79">
-                      <div class="read-more">Read more</div>
-                      <div class="line-arrow-right">
-                        <img class="vuesax-linear-arrow-right" src="{% static 'image/home/vuesax-linear-arrow-right0.svg' %}" />
+          {% for article in articles %}
+            <div class="blog-card">
+              <div class="frame-72">
+                <img class="image-1" src="{{ article.urlToImage }}" alt="{{ article.title }}" onerror="this.onerror=null; this.src='{% static 'image/home/image-10.png' %}';" />
+              </div>
+              <div class="frame-77">
+                <div class="ai-revolution-in-water-sustainability">{{ article.title }}</div>
+                <div class="frame-76">
+                  <div class="frame-75">
+                    <div class="frame-78">
+                      <div class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability">{{ article.description|truncatechars:150 }}</div>
+                      <div class="frame-79">
+                        <div class="read-more">
+                          <a href="{{ article.url }}" target="_blank">Read more</a>
+                        </div>
+                        <div class="line-arrow-right">
+                          <img class="vuesax-linear-arrow-right" src="{% static 'image/home/vuesax-linear-arrow-right0.svg' %}" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="frame-74">
-                  <img class="image2" src="{% static 'image/home/image1.png' %}" />
-                  <div class="frame-73">
-                    <div class="joe-gerlad">Joe Gerlad</div>
-                    <div class="_20-jan-2025">20 Jan 2025</div>
+                  <div class="frame-74">
+                    <img class="image2" src="{% static 'image/home/image1.png' %}" />
+                    <div class="frame-73">
+                      <div class="joe-gerlad">{{ article.source.name|default:'Unknown' }}</div>
+                      <div class="_20-jan-2025">{{ article.publishedAt|date:'d M Y' }}</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="blog-card">
-            <div class="frame-72">
-              <img class="image-1" src="{% static 'image/home/image-11.png' %}" />
-            </div>
-            <div class="frame-77">
-              <div class="ai-revolution-in-water-sustainability">AI Revolution in Water Sustainability</div>
-              <div class="frame-76">
-                <div class="frame-75">
-                  <div class="frame-78">
-                    <div class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability">The intersection of artificial intelligence (AI) and water sustainability has ushered in a new era of environmental innovation.(AI) and water sustainability</div>
-                    <div class="frame-79">
-                      <div class="read-more">Read more</div>
-                      <div class="line-arrow-right">
-                        <img class="vuesax-linear-arrow-right2" src="{% static 'image/home/vuesax-linear-arrow-right1.svg' %}" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-74">
-                  <img class="image2" src="{% static 'image/home/image2.png' %}" />
-                  <div class="frame-73">
-                    <div class="joe-gerlad">Joe Gerlad</div>
-                    <div class="_20-jan-2025">20 Jan 2025</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog-card">
-            <div class="frame-72">
-              <img class="image-1" src="{% static 'image/home/image-12.png' %}" />
-            </div>
-            <div class="frame-77">
-              <div class="ai-revolution-in-water-sustainability">AI Revolution in Water Sustainability</div>
-              <div class="frame-76">
-                <div class="frame-75">
-                  <div class="frame-78">
-                    <div class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability">The intersection of artificial intelligence (AI) and water sustainability has ushered in a new era of environmental innovation.(AI) and water sustainability</div>
-                    <div class="frame-79">
-                      <div class="read-more">Read more</div>
-                      <div class="line-arrow-right">
-                        <img class="vuesax-linear-arrow-right3" src="{% static 'image/home/vuesax-linear-arrow-right2.svg' %}" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-74">
-                  <img class="image2" src="{% static 'image/home/image3.png' %}" />
-                  <div class="frame-73">
-                    <div class="joe-gerlad">Joe Gerlad</div>
-                    <div class="_20-jan-2025">20 Jan 2025</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="frame-82">
           <div class="our-latest-blog">Our Latest Blog</div>

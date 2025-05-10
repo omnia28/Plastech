@@ -545,6 +545,7 @@
     flex-shrink: 0;
     width: 166px;
     position: relative;
+    margin-left: 15px;
 }
 
 .button {
@@ -770,7 +771,6 @@
 
 .image-1 {
     width: 100%;
-    /* Make the image fill the container */
     height: 100%;
     position: absolute;
     left: 0px;
@@ -1009,4 +1009,111 @@
     color: white;
     border-color: #224a77;
     font-weight: 600;
+}
+
+.sign-up2 {
+    padding: 8px 0px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 25px;
+    position: absolute;
+    left: 500px;
+    top: 14px;
+    transform-origin: 0 0;
+    transform: rotate(0deg) scale(-1, 1);
+}
+
+.frame-83 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 261px;
+    position: relative;
+    transform-origin: 0 0;
+    transform: rotate(0deg) scale(-1, 1);
+}
+
+.vuesax-linear-profile-circle {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.profile-circle {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-801 {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-81 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 208px;
+    position: relative;
+}
+
+.vuesax-linear-profile-circle2 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 173px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.account-name {
+    color: #193c62;
+    text-align: center;
+    font-family: var(--body-b2-font-family, "Montserrat-Medium", sans-serif);
+    font-size: var(--body-b2-font-size, 20px);
+    line-height: var(--body-b2-line-height, 100%);
+    font-weight: var(--body-b2-font-weight, 500);
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-down {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.vuesax-bold-arrow-down {
+    height: auto;
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    overflow: visible;
 }

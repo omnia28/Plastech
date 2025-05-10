@@ -189,6 +189,7 @@
   flex-shrink: 0;
   width: 166px;
   position: relative;
+  margin-left: 15px;
 }
 .button {
   background: var(--primary-400, #0b1928);

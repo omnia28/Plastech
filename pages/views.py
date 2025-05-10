@@ -5,7 +5,8 @@ from .forms import ContactForm
 
 # Create your views here.
 def home(request):
-    return render(request, 'pages/home.html')
+    articles = fetch_water_pollution_articles()[1:4]
+    return render(request, 'pages/home.html', {"articles": articles})
 
 def about(request):
     return render(request, 'pages/about.html')
