@@ -65,7 +65,7 @@
                           <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
                         </div>
                         <div>
-                          <a href="{% url 'products' %}" class="our-products">Our products</a>
+                          <a href="{% url 'products' %}" class="our-products">Products</a>
                         </div>
                         <div>
                           <a href="{% url 'about' %}" class="about">About</a>
@@ -81,6 +81,7 @@
                         <div class="frame-801">
                           <div class="frame-81">
                             <div class="vuesax-linear-profile-circle2">
+                              <img class="profile-circle" src="{% static 'image/products/profile-circle0.svg' %}" />
                               <div class="account-name">{{ user.username }}</div>
                             </div>
                             <div class="arrow-down">
@@ -130,12 +131,8 @@
           <br />
           to detect microplastics in water
         </div>
-        <div class="button3">
-          <div class="button2">Get Started</div>
-        </div>
-        <div class="button4">
-          <div class="button5">Learn More</div>
-        </div>
+        <a href="{% url 'products' %}" class="button3"><div class="button2">Get Started</div></a>
+        <a href="{% url 'about' %}" class="button4"><div class="button5">Learn More</div></a>
       </div>
       <div class="footer">
         <div class="frame-54">
@@ -176,16 +173,16 @@
             <div>
               <a href="{% url 'about' %}" class="about-us">About Us</a>
             </div>
-            <div class="blogs2">Blogs</div>
+            <a href="{% url 'blogs' %}" class="blogs2">Blogs</a>
             <div class="results2">Results</div>
             <div>
-              <a href="{% url 'contact' %}" class="contact-us">Contact Us</a>
+              <a href="{% url 'contact' %}" class="contact-us">Contact</a>
             </div>
           </div>
         </div>
         <img class="logo4" src="{% static 'image/home/logo3.png' %}" />
         <img class="logo-text2" src="{% static 'image/home/logo-text1.png' %}" />
-        <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+        <div class="together-for-cleaner-waters">Together for Cleaner Water</div>
       </div>
       <img class="abstract-background" src="{% static 'image/home/abstract-background0.png' %}" />
       <div class="why-choose-our-solution">Why Choose Our Solution?</div>
@@ -254,7 +251,7 @@
           {% for article in articles %}
             <div class="blog-card">
               <div class="frame-72">
-                <img class="image-1" src="{{ article.urlToImage }}" alt="{{ article.title }}" onerror="this.onerror=null; this.src='{% static 'image/home/image-10.png' %}';" />
+                <a href="{{ article.url }}" target="_blank"><img class="image-1" src="{{ article.urlToImage }}" alt="{{ article.title }}" onerror="this.onerror=null; this.src='{% static 'image/home/image-10.png' %}';" /></a>
               </div>
               <div class="frame-77">
                 <div class="ai-revolution-in-water-sustainability">{{ article.title }}</div>
@@ -263,8 +260,8 @@
                     <div class="frame-78">
                       <div class="the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability">{{ article.description|truncatechars:150 }}</div>
                       <div class="frame-79">
-                        <div class="read-more">
-                          <a href="{{ article.url }}" target="_blank">Read more</a>
+                        <div>
+                          <a href="{{ article.url }}" target="_blank" class="read-more">Read more</a>
                         </div>
                         <div class="line-arrow-right">
                           <img class="vuesax-linear-arrow-right" src="{% static 'image/home/vuesax-linear-arrow-right0.svg' %}" />
@@ -273,7 +270,7 @@
                     </div>
                   </div>
                   <div class="frame-74">
-                    <img class="image2" src="{% static 'image/home/image1.png' %}" />
+                    {% comment %} <img class="image2" src="{% static 'image/home/image1.png' %}" /> {% endcomment %}
                     <div class="frame-73">
                       <div class="joe-gerlad">{{ article.source.name|default:'Unknown' }}</div>
                       <div class="_20-jan-2025">{{ article.publishedAt|date:'d M Y' }}</div>
@@ -285,7 +282,7 @@
           {% endfor %}
         </div>
         <div class="frame-82">
-          <div class="our-latest-blog">Our Latest Blog</div>
+          <div class="our-latest-blog">Our Latest Blogs</div>
         </div>
       </div>
     </div>

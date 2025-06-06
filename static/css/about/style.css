@@ -292,7 +292,7 @@
   width: 1300px;
   height: 310px;
   position: absolute;
-  left: 84px;
+  left: 25px;
   top: 165px;
   overflow: hidden;
 }
@@ -347,9 +347,9 @@
   background: rgba(217, 217, 217, 0.43);
   border-radius: 16px;
   width: 657px;
-  height: 492px;
+  height: 470px;
   position: absolute;
-  left: 60px;
+  left: 40px;
   top: 617px;
   box-shadow: 5px 10px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -360,19 +360,19 @@
   width: 360px;
   height: 117px;
   position: absolute;
-  left: 202px;
-  top: 573px;
+  left: 182px;
+  top: 563px;
   box-shadow: 10px 11px 4px 0px rgba(0, 0, 0, 0.73);
 }
 .our-mission-is-to-revolutionize-water-purity-detection-through-the-innovative-integration-of-ai-and-advanced-sensor-technology-empowering-communities-and-industries-to-tackle-microplastic-pollution-for-a-healthier-more-sustainable-future {
   color: var(--primary-400, #0b1928);
   text-align: left;
   font-family: "Montserrat-SemiBold", sans-serif;
-  font-size: 32px;
-  line-height: 113%;
-  font-weight: 600;
+  font-size: 29px;
+  line-height: 150%;
+  font-weight: 520;
   position: absolute;
-  left: 90px;
+  left: 75px;
   top: 736px;
   width: 608px;
 }
@@ -389,27 +389,27 @@
   line-height: 100%;
   font-weight: 800;
   position: absolute;
-  left: calc(50% - 579px);
-  top: 608px;
+  left: 121px;
+  top: 591px;
   width: 481.26px;
 }
 .photo-1-our-mission {
-  background: var(--primary-200, #387bc7);
+  background: var(--primary-200, #245fa3);
   border-radius: 16px;
-  width: 521px;
+  width: 501px;
   height: 395px;
   position: absolute;
-  left: 860px;
-  top: 565px;
+  left: 810px;
+  top: 645px;
 }
 .photo-2-our-mission {
   background: var(--primary-300, #224a77);
   border-radius: 16px;
   width: 479px;
-  height: 362px;
+  height: 392px;
   position: absolute;
-  left: -58px;
-  top: 161px;
+  left: -15px;
+  top: 20px;
   box-shadow: 7px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
@@ -419,7 +419,7 @@
   height: 538px;
   position: absolute;
   left: -29px;
-  top: -88px;
+  top: -48px;
   object-fit: cover;
 }
 .footer {

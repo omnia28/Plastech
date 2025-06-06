@@ -36,7 +36,7 @@
         padding: 0;
       }
     </style>
-    <link rel="icon" href="{% static 'image/products/logo2.png' %}" type="image/png">
+    <link rel="icon" href="{% static 'image/products/logo2.png' %}" type="image/png" />
     <title>Products</title>
   </head>
   <body>
@@ -64,38 +64,61 @@
             <div class="frame-492">
               <div class="nav">
                 <div class="nav2">
-                  <div class="home">Home</div>
+                  <a href="{% url 'home' %}" class="home">Home</a>
                   <div class="results">Results</div>
-                  <div class="blogs">Blogs</div>
-                  <div class="our-products">Our products</div>
-                  <div class="about">About</div>
+                  <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
+                  <a href="{% url 'products' %}" class="our-products">Products</a>
+                  <a href="{% url 'about' %}" class="about">About</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="sign-up">
-          <div class="frame-83">
-            <div class="vuesax-linear-profile-circle">
-              <img class="profile-circle" src="{% static 'image/products/profile-circle0.svg' %}" />
-            </div>
-            <div class="frame-80">
-              <div class="frame-81">
-                <div class="vuesax-linear-profile-circle2">
-                  <div class="account-name">ACCOUNT NAME</div>
-                </div>
-                <div class="arrow-down">
-                  <img class="vuesax-bold-arrow-down" src="{% static 'image/products/vuesax-bold-arrow-down0.svg' %}" />
+        {% if user.is_authenticated %}
+          <div class="sign-up">
+            <div class="frame-83">
+              <div class="vuesax-linear-profile-circle">
+                <img class="profile-circle" src="{% static 'image/products/profile-circle0.svg' %}" />
+              </div>
+              <div class="frame-80">
+                <div class="frame-81">
+                  <div class="vuesax-linear-profile-circle2">
+                    <div class="account-name">{{ user.username }}</div>
+                  </div>
+                  {% comment %} <div class="arrow-down">
+                    <img class="vuesax-bold-arrow-down" src="{% static 'image/products/vuesax-bold-arrow-down0.svg' %}" />
+                  </div>
+                  {% endcomment %}
+
+                  <div class="dropdown-container">
+                    <!-- Arrow Button -->
+                    <div class="arrow-down" onclick="toggleDropdown()">
+                      <img class="vuesax-bold-arrow-down" src="{% static 'image/products/vuesax-bold-arrow-down0.svg' %}" />
+                    </div>
+
+                    <!-- Dropdown Menu -->
+                    <div id="dropdown-menu" class="dropdown-menu">
+                      <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        {% else %}
+          <div class="sign-up2">
+            <div class="button5">
+              <a href="{% url 'register' %}" class="button6">Sign Up</a>
+            </div>
+          </div>
+        {% endif %}
       </div>
       <div class="frame-106">
-        <div class="_200">$200</div>
-        <div class="torem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-etiam-eu-turpis-molestie-dictum-est-a-mattis-tellus-sed-dignissim-metus-nec-fringilla-accumsan-risus-sem-sollicitudin-lacus-ut-interdum-tellus-elit-sed-risus-maecenas-eget-condimentum-velit-sit-amet-feugiat-lectus-class-aptent-taciti-sociosqu-ad-litora-torquent-per-conubia">Torem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia</div>
-        <div class="dectect-water-sensor">Detect water sensor</div>
+        {% for product in products %}
+          <div class="_200">${{ product.price }}</div>
+          <div class="torem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-etiam-eu-turpis-molestie-dictum-est-a-mattis-tellus-sed-dignissim-metus-nec-fringilla-accumsan-risus-sem-sollicitudin-lacus-ut-interdum-tellus-elit-sed-risus-maecenas-eget-condimentum-velit-sit-amet-feugiat-lectus-class-aptent-taciti-sociosqu-ad-litora-torquent-per-conubia">{{ product.desc }}</div>
+          <div class="dectect-water-sensor">{{ product.name }}</div>
+        {% endfor %}
       </div>
       <div class="footer">
         <div class="frame-54">
@@ -133,10 +156,10 @@
             </div>
           </div>
           <div class="frame-46">
-            <div class="about-us">About Us</div>
+            <div class="about-us">About</div>
             <div class="blogs2">Blogs</div>
             <div class="results2">Results</div>
-            <div class="contact-us">Contact Us</div>
+            <div class="contact-us">Contact</div>
           </div>
         </div>
         <img class="logo4" src="{% static 'image/products/logo3.png' %}" />
@@ -144,7 +167,7 @@
         <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
       </div>
       <div class="line-arrow-right">
-        <img class="vuesax-outline-arrow-right" src="{% static 'image/products/vuesax-outline-arrow-right0.svg' %}" />
+        {% comment %} <img class="vuesax-outline-arrow-right" src="{% static 'image/products/vuesax-outline-arrow-right0.svg' %}" /> {% endcomment %}
       </div>
       <div class="button">
         <div class="button2">Reservation</div>
@@ -152,8 +175,25 @@
       <div class="button3">
         <div class="button4">Read More</div>
       </div>
-      <img class="image-20" src="{% static 'image/products/image-200.png' %}" />
+      {% for product in products %}
+        <img class="image-20" src="{{ product.image.url }}" />
+      {% endfor %}
       <div class="ellipse-1083"></div>
     </div>
   </body>
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdown-menu')
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block'
+    }
+    
+    // Optional: Hide dropdown if clicking outside
+    document.addEventListener('click', function (event) {
+      const dropdown = document.getElementById('dropdown-menu')
+      const arrow = document.querySelector('.arrow-down')
+      if (!arrow.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none'
+      }
+    })
+  </script>
 </html>

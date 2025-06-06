@@ -2,6 +2,7 @@
 .home-page * {
   box-sizing: border-box;
 }
+
 .home-page {
   background: #ffffff;
   padding: 8px;
@@ -9,6 +10,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .image-5 {
   width: 1554px;
   height: 648px;
@@ -17,15 +19,18 @@
   bottom: -207px;
   object-fit: cover;
 }
+
 .hero-section {
   position: absolute;
   inset: 0;
 }
+
 .slider-1 {
   width: 1462px;
   height: 814.87px;
   position: static;
 }
+
 .image {
   border-radius: 16px;
   width: 1450.92px;
@@ -35,13 +40,12 @@
   top: -6px;
   object-fit: cover;
 }
+
 .rectangle-2 {
-  background: linear-gradient(
-    180deg,
-    rgba(17, 14, 14, 0.3) 0%,
-    rgba(3, 1, 1, 0.3) 47.33186960220337%,
-    rgba(217, 217, 217, 0) 94.66373920440674%
-  );
+  background: linear-gradient(180deg,
+      rgba(17, 14, 14, 0.3) 0%,
+      rgba(3, 1, 1, 0.3) 47.33186960220337%,
+      rgba(217, 217, 217, 0) 94.66373920440674%);
   border-radius: 16px;
   width: 1462px;
   height: 814.87px;
@@ -49,6 +53,7 @@
   left: -11px;
   top: -6px;
 }
+
 .header {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
@@ -59,6 +64,7 @@
   top: 14px;
   overflow: hidden;
 }
+
 .frame-52 {
   padding: 8px;
   display: flex;
@@ -71,6 +77,7 @@
   left: 591px;
   top: 8px;
 }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -81,6 +88,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-53 {
   display: flex;
   flex-direction: column;
@@ -91,6 +99,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .header2 {
   border-radius: 16px;
   display: flex;
@@ -102,7 +111,9 @@
   width: 690px;
   height: 64px;
   position: relative;
+  left: -10px;
 }
+
 .frame-51 {
   display: flex;
   flex-direction: column;
@@ -113,6 +124,7 @@
   width: 401px;
   position: relative;
 }
+
 .frame-49 {
   display: flex;
   flex-direction: column;
@@ -123,6 +135,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .nav {
   padding: 8px;
   display: flex;
@@ -134,6 +147,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .nav2 {
   display: flex;
   flex-direction: row;
@@ -144,6 +158,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .home {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -155,7 +170,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.5s forwards;
+  animation-delay: 0.3s;
 }
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #0b1928;
+  transition: width 0.3s ease;
+}
+
+.home:hover::after {
+  width: 100%;
+}
+
 .results {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -167,7 +210,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.5s forwards;
+  animation-delay: 0.3s;
 }
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #224a77;
+  transition: width 0.3s ease;
+}
+
+.results:hover::after {
+  width: 100%;
+}
+
+
 .blogs {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -179,7 +250,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.5s forwards;
+  animation-delay: 0.3s;
 }
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blogs::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #224a77;
+  transition: width 0.3s ease;
+}
+
+.blogs:hover::after {
+  width: 100%;
+}
+
+
 .our-products {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -191,7 +291,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.5s forwards;
+  animation-delay: 0.3s;
 }
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.our-products::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #224a77;
+  transition: width 0.3s ease;
+}
+
+.our-products:hover::after {
+  width: 100%;
+}
+
 .about {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -203,7 +331,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlide 0.5s forwards;
+  animation-delay: 0.3s;
 }
+
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #224a77;
+  transition: width 0.3s ease;
+}
+
+.about:hover::after {
+  width: 100%;
+}
+
 .sign-up {
   padding: 8px;
   display: flex;
@@ -216,6 +372,7 @@
   position: relative;
   margin-left: 15px;
 }
+
 .button {
   background: var(--primary-400, #0b1928);
   border-radius: 48px;
@@ -230,19 +387,19 @@
   height: 48px;
   position: relative;
 }
+
 .button2 {
   color: #ffffff;
   text-align: left;
-  font-family: var(
-    --button-an-labels-font-family,
-    "Montserrat-Bold",
-    sans-serif
-  );
+  font-family: var(--button-an-labels-font-family,
+      "Montserrat-Bold",
+      sans-serif);
   font-size: var(--button-an-labels-font-size, 16px);
   line-height: var(--button-an-labels-line-height, 70%);
   font-weight: var(--button-an-labels-font-weight, 700);
   position: relative;
 }
+
 .logo2 {
   display: flex;
   flex-direction: column;
@@ -254,6 +411,7 @@
   left: 21px;
   top: -4px;
 }
+
 .frame-492 {
   padding: 8px;
   display: flex;
@@ -265,6 +423,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-50 {
   display: flex;
   flex-direction: column;
@@ -275,6 +434,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-47 {
   display: flex;
   flex-direction: row;
@@ -285,6 +445,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-48 {
   display: flex;
   flex-direction: row;
@@ -295,6 +456,7 @@
   width: 233px;
   position: relative;
 }
+
 .logo3 {
   border-radius: 16px;
   flex-shrink: 0;
@@ -303,6 +465,7 @@
   position: relative;
   object-fit: cover;
 }
+
 .logo-text {
   border-radius: 16px;
   flex-shrink: 0;
@@ -311,11 +474,13 @@
   position: relative;
   object-fit: cover;
 }
+
 .slider {
   width: 1049px;
   height: 485px;
   position: static;
 }
+
 .rectangle-3 {
   background: rgba(217, 217, 217, 0.3);
   border-radius: 16px;
@@ -327,14 +492,13 @@
   top: 189px;
   box-shadow: 8px 7px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .revolutionizing-water-purity-detection-with-ai {
   color: var(--primary-400, #0b1928);
   text-align: center;
-  font-family: var(
-    --headings-h1-font-family,
-    "Montserrat-ExtraBold",
-    sans-serif
-  );
+  font-family: var(--headings-h1-font-family,
+      "Montserrat-ExtraBold",
+      sans-serif);
   font-size: var(--headings-h1-font-size, 64px);
   line-height: var(--headings-h1-line-height, 100%);
   font-weight: var(--headings-h1-font-weight, 800);
@@ -345,14 +509,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .advanced-sensors-and-ai-working-together-to-detect-microplastics-in-water {
   color: #ffffff;
   text-align: center;
-  font-family: var(
-    --headings-h2-font-family,
-    "Montserrat-SemiBold",
-    sans-serif
-  );
+  font-family: var(--headings-h2-font-family,
+      "Montserrat-SemiBold",
+      sans-serif);
   font-size: var(--headings-h2-font-size, 32px);
   line-height: var(--headings-h2-line-height, 100%);
   font-weight: var(--headings-h2-font-weight, 600);
@@ -363,10 +526,10 @@
   align-items: center;
   justify-content: center;
 }
+
 .button3 {
   background: var(--primary-400, #0b1928);
   border-radius: 16px;
-  /* padding: 12px; */
   padding-inline: 35px;
   padding-block: 20px;
   display: flex;
@@ -377,21 +540,25 @@
   position: absolute;
   left: 482px;
   top: 510px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.button3:hover {
+  background-color: #2d3748;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .button4 {
   border-radius: 16px;
   border-width: 2px;
   border-style: solid;
-  border-image: var(
-    --gradient-1,
-    linear-gradient(
-      200.43deg,
-      rgba(75, 187, 181, 1) 0%,
-      rgba(9, 16, 87, 1) 98.27224016189575%
-    )
-  );
+  border-image: var(--gradient-1,
+      linear-gradient(200.43deg,
+        rgba(75, 187, 181, 1) 0%,
+        rgba(9, 16, 87, 1) 98.27224016189575%));
   border-image-slice: 1;
-  /* padding: 8px; */
   padding-inline: 30px;
   padding-block: 15px;
   display: flex;
@@ -399,25 +566,23 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  /* width: 150px;
-  height: 48px; */
   position: absolute;
   left: 725px;
   top: 512px;
 }
+
 .button5 {
   color: #0b1928;
   text-align: left;
-  font-family: var(
-    --button-an-labels-font-family,
-    "Montserrat-Bold",
-    sans-serif
-  );
+  font-family: var(--button-an-labels-font-family,
+      "Montserrat-Bold",
+      sans-serif);
   font-size: var(--button-an-labels-font-size, 16px);
   line-height: var(--button-an-labels-line-height, 70%);
   font-weight: var(--button-an-labels-font-weight, 700);
   position: relative;
 }
+
 .footer {
   background: #ffffff;
   border-radius: 16px;
@@ -429,6 +594,7 @@
   box-shadow: -4px -9px 4px 0px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
+
 .frame-54 {
   display: flex;
   flex-direction: row;
@@ -440,6 +606,7 @@
   left: 741px;
   top: 57px;
 }
+
 .frame-45 {
   display: flex;
   flex-direction: row;
@@ -450,6 +617,7 @@
   width: 427px;
   position: relative;
 }
+
 .frame-41 {
   display: flex;
   flex-direction: column;
@@ -459,7 +627,9 @@
   flex-shrink: 0;
   width: 182px;
   position: relative;
+  left: -30px;
 }
+
 .contact-usct {
   text-align: left;
   font-family: "Montserrat-SemiBold", sans-serif;
@@ -472,6 +642,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .contact-usct-span {
   color: var(--primary-400, #0b1928);
   font-family: "Montserrat-SemiBold", sans-serif;
@@ -479,6 +650,7 @@
   line-height: 100%;
   font-weight: 600;
 }
+
 .contact-usct-span2 {
   color: #ffffff;
   font-family: "Montserrat-SemiBold", sans-serif;
@@ -486,6 +658,7 @@
   line-height: 100%;
   font-weight: 600;
 }
+
 .frame-40 {
   display: flex;
   flex-direction: column;
@@ -496,6 +669,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-39 {
   display: flex;
   flex-direction: row;
@@ -506,12 +680,14 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .call {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
   position: relative;
 }
+
 .vuesax-linear-call {
   height: auto;
   position: absolute;
@@ -519,6 +695,7 @@
   top: 0px;
   overflow: visible;
 }
+
 ._201276003504 {
   color: #000000;
   text-align: center;
@@ -531,6 +708,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-38 {
   display: flex;
   flex-direction: row;
@@ -541,6 +719,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .location {
   flex-shrink: 0;
   width: 24px;
@@ -548,6 +727,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .vuesax-bold-location {
   width: 100%;
   height: 100%;
@@ -558,6 +738,7 @@
   top: 0%;
   overflow: visible;
 }
+
 .alexandria-egypt {
   color: #000000;
   text-align: center;
@@ -570,6 +751,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-44 {
   display: flex;
   flex-direction: column;
@@ -580,7 +762,9 @@
   width: 183px;
   height: 86px;
   position: relative;
+  left: -22px;
 }
+
 .follow-us {
   color: var(--primary-400, #0b1928);
   text-align: left;
@@ -594,6 +778,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .frame-42 {
   display: flex;
   flex-direction: row;
@@ -604,6 +789,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .linkedin {
   flex-shrink: 0;
   width: 32px;
@@ -611,6 +797,7 @@
   position: relative;
   overflow: visible;
 }
+
 .facebook {
   flex-shrink: 0;
   width: 32px;
@@ -618,6 +805,7 @@
   position: relative;
   overflow: visible;
 }
+
 .instagram {
   flex-shrink: 0;
   width: 32px;
@@ -625,6 +813,7 @@
   position: relative;
   overflow: visible;
 }
+
 .twitter {
   flex-shrink: 0;
   width: 32px;
@@ -632,6 +821,7 @@
   position: relative;
   overflow: visible;
 }
+
 .frame-46 {
   display: flex;
   flex-direction: row;
@@ -643,7 +833,9 @@
   flex-shrink: 0;
   width: 78px;
   position: relative;
+  left: -25px;
 }
+
 .about-us {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -656,6 +848,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .blogs2 {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -668,6 +861,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .results2 {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -680,6 +874,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .contact-us {
   color: var(--primary-400, #0b1928);
   text-align: center;
@@ -692,33 +887,32 @@
   align-items: center;
   justify-content: center;
 }
+
 .logo4 {
   border-radius: 16px;
   width: 94px;
   height: 76px;
   position: absolute;
-  left: 127px;
+  left: 60px;
   top: 13px;
   object-fit: cover;
 }
+
 .logo-text2 {
   border-radius: 16px;
   width: 520px;
   height: 75px;
   position: absolute;
-  left: 150px;
+  left: 90px;
   top: 127px;
   object-fit: cover;
 }
+
 .together-for-cleaner-waters {
-  background: var(
-    --gradient-1,
-    linear-gradient(
-      200.43deg,
-      rgba(75, 187, 181, 1) 0%,
-      rgba(9, 16, 87, 1) 98.27224016189575%
-    )
-  );
+  background: var(--gradient-1,
+      linear-gradient(200.43deg,
+        rgba(75, 187, 181, 1) 0%,
+        rgba(9, 16, 87, 1) 98.27224016189575%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -728,16 +922,18 @@
   line-height: 100%;
   font-weight: 700;
   position: absolute;
-  left: 140px;
+  left: 80px;
   top: 97px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .why-choose-our-sol {
   position: absolute;
   inset: 0;
 }
+
 .abstract-background {
   width: fit-content;
   height: max-content;
@@ -746,15 +942,12 @@
   top: 803px;
   object-fit: cover;
 }
+
 .why-choose-our-solution {
-  background: var(
-    --gradient-1,
-    linear-gradient(
-      200.43deg,
-      rgba(75, 187, 181, 1) 0%,
-      rgba(9, 16, 87, 1) 98.27224016189575%
-    )
-  );
+  background: var(--gradient-1,
+      linear-gradient(200.43deg,
+        rgba(75, 187, 181, 1) 0%,
+        rgba(9, 16, 87, 1) 98.27224016189575%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -772,12 +965,11 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-5 {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(5, 51, 82, 0.89) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(5, 51, 82, 0.89) 100%);
   border-radius: 16px;
   width: 370px;
   height: 481px;
@@ -786,6 +978,7 @@
   top: 1056px;
   box-shadow: 8px 6px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .frame-6 {
   display: flex;
   flex-direction: column;
@@ -798,14 +991,13 @@
   translate: -50%;
   top: 201px;
 }
+
 .real-time-detection {
   color: #0b1928;
   text-align: center;
-  font-family: var(
-    --headings-h3-font-family,
-    "Montserrat-SemiBold",
-    sans-serif
-  );
+  font-family: var(--headings-h3-font-family,
+      "Montserrat-SemiBold",
+      sans-serif);
   font-size: var(--headings-h3-font-size, 32px);
   line-height: var(--headings-h3-line-height, 113%);
   font-weight: var(--headings-h3-font-weight, 600);
@@ -814,6 +1006,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .monitor-microplastic-levels-instantly-with-precise-readings {
   color: #ffffff;
   text-align: center;
@@ -828,6 +1021,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-55 {
   background: #ffffff;
   border-radius: 250px;
@@ -839,6 +1033,7 @@
   box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .leonardo-phoenix-10-a-sleek-modern-and-minimalist-logo-featuri-3-1 {
   width: 244px;
   height: 244px;
@@ -849,12 +1044,11 @@
   transform: rotate(30.361deg) scale(1, 1);
   object-fit: cover;
 }
+
 .frame-62 {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(5, 51, 82, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(5, 51, 82, 1) 100%);
   border-radius: 16px;
   width: 370px;
   height: 476px;
@@ -863,14 +1057,13 @@
   top: 1130px;
   box-shadow: 8px 6px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .ai-precision {
   color: #0b1928;
   text-align: center;
-  font-family: var(
-    --headings-h3-font-family,
-    "Montserrat-SemiBold",
-    sans-serif
-  );
+  font-family: var(--headings-h3-font-family,
+      "Montserrat-SemiBold",
+      sans-serif);
   font-size: var(--headings-h3-font-size, 32px);
   line-height: var(--headings-h3-line-height, 113%);
   font-weight: var(--headings-h3-font-weight, 600);
@@ -880,6 +1073,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .advanced-ai-ensuring-98-detection-accuracy {
   color: #ffffff;
   text-align: center;
@@ -894,6 +1088,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-552 {
   background: #ffffff;
   border-radius: 250px;
@@ -905,6 +1100,7 @@
   box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .leonardo-phoenix-10-a-futuristic-hightech-illustration-of-an-a-0-1 {
   width: 218px;
   height: 218px;
@@ -913,12 +1109,11 @@
   top: -15px;
   object-fit: cover;
 }
+
 .frame-7 {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    rgba(5, 51, 82, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(5, 51, 82, 1) 100%);
   border-radius: 16px;
   width: 370px;
   height: 496px;
@@ -927,14 +1122,13 @@
   top: 1041px;
   box-shadow: 8px 6px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .sustainable-impact {
   color: #0b1928;
   text-align: center;
-  font-family: var(
-    --headings-h3-font-family,
-    "Montserrat-SemiBold",
-    sans-serif
-  );
+  font-family: var(--headings-h3-font-family,
+      "Montserrat-SemiBold",
+      sans-serif);
   font-size: var(--headings-h3-font-size, 32px);
   line-height: var(--headings-h3-line-height, 113%);
   font-weight: var(--headings-h3-font-weight, 600);
@@ -944,6 +1138,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .minimize-pollution-with-innovative-technology {
   color: #ffffff;
   text-align: center;
@@ -958,6 +1153,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .leonardo-phoenix-10-a-stylized-vibrant-and-modern-a-igenerated-2-1 {
   width: 219px;
   height: 219px;
@@ -966,10 +1162,12 @@
   top: -15px;
   object-fit: cover;
 }
+
 .impact-stats-section {
   position: absolute;
   inset: 0;
 }
+
 .frame-56 {
   background: var(--primary-300, #224a77);
   width: 1440px;
@@ -979,6 +1177,7 @@
   top: 1677px;
   overflow: hidden;
 }
+
 .image-8 {
   width: 1754px;
   height: 570px;
@@ -987,6 +1186,7 @@
   top: 0px;
   object-fit: cover;
 }
+
 .through-cutting-edge-technology-we-re-addressing-the-urgent-issue-of-water-contamination-by-detecting-microplastics-with-unparalleled-precision-every-analysis-brings-us-closer-to-a-cleaner-healthier-environment-emphasizing-the-importance-of-innovation-and-sustainability-in-safeguarding-our-planet-s-most-vital-resource {
   color: #ffffff;
   text-align: left;
@@ -1002,6 +1202,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .frame-68 {
   background: #ffffff;
   border-radius: 8px;
@@ -1011,8 +1212,9 @@
   left: 850px;
   top: 79px;
   box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  
+
 }
+
 .frame-70 {
   display: flex;
   flex-direction: column;
@@ -1026,6 +1228,7 @@
   top: 206px;
   overflow: visible;
 }
+
 ._1-250-000-liters {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1042,6 +1245,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .water-analyzed {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1057,6 +1261,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-69 {
   background: #ffffff;
   border-radius: 8px;
@@ -1068,6 +1273,7 @@
   box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .frame-702 {
   display: flex;
   flex-direction: column;
@@ -1079,6 +1285,7 @@
   left: -14px;
   top: 27px;
 }
+
 ._98 {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1093,6 +1300,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .line-1 {
   flex-shrink: 0;
   width: 192px;
@@ -1100,6 +1308,7 @@
   position: relative;
   overflow: visible;
 }
+
 .detection-accuracy {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1113,6 +1322,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .frame-703 {
   background: #ffffff;
   border-radius: 8px;
@@ -1124,6 +1334,7 @@
   box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .frame-704 {
   display: flex;
   flex-direction: column;
@@ -1135,6 +1346,7 @@
   left: -14px;
   top: 28px;
 }
+
 ._100-000 {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1149,6 +1361,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .line-12 {
   flex-shrink: 0;
   width: 192px;
@@ -1156,6 +1369,7 @@
   position: relative;
   overflow: visible;
 }
+
 .microplastics-detected {
   color: var(--primary-300, #224a77);
   text-align: center;
@@ -1169,6 +1383,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .making-a-measurable-impact {
   color: #ffffff;
   text-align: center;
@@ -1183,6 +1398,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .blog-slider {
   background: var(--primary-100, #88b0dd);
   border-radius: 16px;
@@ -1192,6 +1408,7 @@
   left: 35px;
   top: 2335px;
 }
+
 .image-9 {
   border-radius: 16px;
   width: 1285px;
@@ -1201,6 +1418,7 @@
   top: 0px;
   object-fit: cover;
 }
+
 .frame-64 {
   background: rgba(0, 0, 0, 0.67);
   border-radius: 16px;
@@ -1208,8 +1426,9 @@
   height: 464px;
   position: absolute;
   left: 0px;
-  top: 2px;
+  top: 1px;
 }
+
 .our-approach-combines-cutting-edge-technology-unrivaled-expertise-world-class-services-and-flexible-financing-options-to {
   color: #ffffff;
   text-align: center;
@@ -1220,12 +1439,13 @@
   position: absolute;
   left: 50%;
   translate: -50%;
-  top: 88px;
+  top: 111px;
   width: 772px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .frame-80 {
   display: flex;
   flex-direction: row;
@@ -1236,6 +1456,7 @@
   left: 90px;
   top: 233px;
 }
+
 .blog-card {
   background: #ffffff;
   border-radius: 16px;
@@ -1244,39 +1465,50 @@
   height: 420px;
   position: relative;
   right: 27px;
+  top: -11px;
   box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .frame-72 {
   background: #c85c5c;
   border-radius: 16px;
-  width: 350px;
+  width: 100%;
   height: 178px;
   position: absolute;
   left: 0px;
   top: 0px;
   overflow: hidden;
 }
+
 .image-1 {
-  width: 398px;
-  height: 228px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: -10px;
-  top: -50px;
+  left: 0px;
+  top: 0px;
   object-fit: cover;
 }
+
 .frame-77 {
   display: flex;
   flex-direction: column;
   gap: 31px;
   align-items: flex-start;
   justify-content: center;
-  width: 321px;
+  width: calc(100% - 28px);
   height: 242px;
   position: absolute;
   left: 14px;
-  top: 155px;
+  top: 178px;
 }
+
 .ai-revolution-in-water-sustainability {
   color: #000000;
   text-align: left;
@@ -1290,6 +1522,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .frame-76 {
   display: flex;
   flex-direction: column;
@@ -1301,6 +1534,7 @@
   height: 124px;
   position: relative;
 }
+
 .frame-75 {
   display: flex;
   flex-direction: column;
@@ -1311,6 +1545,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-78 {
   display: flex;
   flex-direction: column;
@@ -1320,6 +1555,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .the-intersection-of-artificial-intelligence-ai-and-water-sustainability-has-ushered-in-a-new-era-of-environmental-innovation-ai-and-water-sustainability {
   color: var(--text-style-300, #4e4e4e);
   text-align: left;
@@ -1333,6 +1569,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .frame-79 {
   margin: -9px 0 0 0;
   display: flex;
@@ -1343,6 +1580,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .read-more {
   color: #000000;
   text-align: right;
@@ -1351,16 +1589,20 @@
   line-height: 100%;
   font-weight: 600;
   position: relative;
+  top: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 .line-arrow-right {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
   position: relative;
+  top: 10px;
 }
+
 .vuesax-linear-arrow-right {
   height: auto;
   position: absolute;
@@ -1368,6 +1610,7 @@
   top: 0px;
   overflow: visible;
 }
+
 .frame-74 {
   padding: 27px 0px 0px 0px;
   display: flex;
@@ -1378,6 +1621,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .image2 {
   border-radius: 50%;
   flex-shrink: 0;
@@ -1386,6 +1630,7 @@
   position: relative;
   object-fit: cover;
 }
+
 .frame-73 {
   display: flex;
   flex-direction: column;
@@ -1396,6 +1641,7 @@
   width: 86px;
   position: relative;
 }
+
 .joe-gerlad {
   color: #000000;
   text-align: center;
@@ -1404,11 +1650,13 @@
   line-height: 100%;
   font-weight: 500;
   position: relative;
+  left: 10px;
   align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 ._20-jan-2025 {
   color: var(--text-style-300, #4e4e4e);
   text-align: left;
@@ -1422,6 +1670,7 @@
   align-items: center;
   justify-content: flex-start;
 }
+
 .vuesax-linear-arrow-right2 {
   height: auto;
   position: absolute;
@@ -1429,6 +1678,7 @@
   top: 0px;
   overflow: visible;
 }
+
 .vuesax-linear-arrow-right3 {
   height: auto;
   position: absolute;
@@ -1436,42 +1686,41 @@
   top: 0px;
   overflow: visible;
 }
+
 .frame-82 {
   background: #ffffff;
   border-radius: 16px;
   width: 585px;
   height: 115px;
   position: absolute;
-  left: 379px;
+  left: 351px;
   top: -58px;
   box-shadow: 8px -4px 4px 0px rgba(0, 0, 0, 0.17);
   overflow: hidden;
 }
+
 .our-latest-blog {
-  background: var(
-    --gradient-1,
-    linear-gradient(
-      200.43deg,
-      rgba(75, 187, 181, 1) 0%,
-      rgba(9, 16, 87, 1) 98.27224016189575%
-    )
-  );
+  background: var(--gradient-1,
+      linear-gradient(200.43deg,
+        rgba(75, 187, 181, 1) 0%,
+        rgba(9, 16, 87, 1) 98.27224016189575%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-family: "Montserrat-ExtraBold", sans-serif;
-  font-size: 64px;
-  line-height: 100%;
+  font-size: 4.4vw;
   font-weight: 800;
   position: absolute;
+  width: 100%;
   left: 50%;
   translate: -50%;
-  top: 26px;
+  top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .sign-up2 {
   padding: 8px 0px 8px 8px;
   display: flex;
@@ -1486,6 +1735,7 @@
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
+
 .frame-83 {
   display: flex;
   flex-direction: row;
@@ -1498,6 +1748,7 @@
   transform-origin: 0 0;
   transform: rotate(0deg) scale(-1, 1);
 }
+
 .vuesax-linear-profile-circle {
   display: flex;
   flex-direction: row;
@@ -1507,13 +1758,16 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .profile-circle {
   flex-shrink: 0;
   width: 48px;
   height: 48px;
   position: relative;
   overflow: visible;
+  left: 20px;
 }
+
 .frame-801 {
   display: flex;
   flex-direction: row;
@@ -1523,6 +1777,7 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-81 {
   display: flex;
   flex-direction: row;
@@ -1532,6 +1787,7 @@
   width: 208px;
   position: relative;
 }
+
 .vuesax-linear-profile-circle2 {
   display: flex;
   flex-direction: row;
@@ -1541,8 +1797,11 @@
   flex-shrink: 0;
   width: 173px;
   position: relative;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  left: 50px;
+  top: -15px;
 }
+
 .account-name {
   color: #193c62;
   text-align: center;
@@ -1556,12 +1815,16 @@
   align-items: center;
   justify-content: center;
 }
+
 .arrow-down {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
   position: relative;
+  left: 30px;
+  top: -15px;
 }
+
 .vuesax-bold-arrow-down {
   height: auto;
   position: absolute;

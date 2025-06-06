@@ -481,6 +481,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #224a77;
+    transition: width 0.3s ease;
+}
+
+.home:hover::after {
+    width: 100%;
 }
 
 .results2 {
@@ -494,6 +521,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.results2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #224a77;
+    transition: width 0.3s ease;
+}
+
+.results2:hover::after {
+    width: 100%;
 }
 
 .blogs3 {
@@ -507,6 +559,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.blogs3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #0b1928;
+    transition: width 0.3s ease;
+}
+
+.blogs3:hover::after {
+    width: 100%;
 }
 
 .our-products {
@@ -520,6 +598,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.our-products::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #224a77;
+    transition: width 0.3s ease;
+}
+
+.our-products:hover::after {
+    width: 100%;
 }
 
 .about {
@@ -533,6 +637,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #224a77;
+    transition: width 0.3s ease;
+}
+
+.about:hover::after {
+    width: 100%;
 }
 
 .sign-up {
@@ -755,6 +885,12 @@
     position: relative;
     box-shadow: 8px 4px 4px 0px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .frame-72 {
