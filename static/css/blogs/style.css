@@ -875,7 +875,6 @@
 .frame-87,
 .frame-882 {
     display: contents;
-    /* These containers are no longer needed for the grid layout */
 }
 
 .blog-card {
@@ -897,7 +896,6 @@
     background: #c85c5c;
     border-radius: 16px;
     width: 100%;
-    /* Make the image container fill the card width */
     height: 178px;
     position: absolute;
     left: 0px;
@@ -921,7 +919,6 @@
     align-items: flex-start;
     justify-content: center;
     width: calc(100% - 28px);
-    /* Adjust width for padding */
     height: 242px;
     position: absolute;
     left: 14px;
