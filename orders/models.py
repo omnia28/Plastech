@@ -20,6 +20,8 @@ class Order(models.Model):
     order_date = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=50, choices=status_choices, default='pending')
     shipping_address = models.TextField()
+    notes = models.TextField(null=True, blank=True)
+    phone_number = models.CharField(max_length=15)
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     payment_status = models.CharField(max_length=20, choices=payment_choices, default='unpaid')
     

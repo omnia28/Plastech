@@ -41,41 +41,9 @@
     <title>Sign Up</title>
   </head>
   <body>
-    {% comment %} <div class="log-in-page">
-      <img class="ce-1569-f-55-f-1" src="{% static 'image/register/ce-1569-f-55-f-10.png' %}" />
-      <div class="frame-1000000791">
-        <div class="line-4"></div>
-        <div class="line-5"></div>
-        <div class="line-6"></div>
-        <div class="line-7"></div>
-        <form method="post">
-          {% csrf_token %}
-          <label for="{{ form.first_name.id_for_label }}">Full Name</label>
-          <div class="full-name">{{ form.first_name }}</div>
-          <div class="email-address">{{ form.email }}</div>
-          <div class="password">{{ form.password }}</div>
-          <div class="password2">{{ form.password2 }}</div>
-          <div class="create-account">Create Account</div>
-          <div class="frame-105">
-            <button type="submit" class="create-account2" style=" border:none; color:white; font-size:40px; font-family:'Montserrat-SemiBold'; cursor:pointer;">create</button>
-          </div>
-        </form>
-        <div class="already-have-a-account-login">
-          <span>
-            <span class="already-have-a-account-login-span">Already have a account?</span>
-            <span class="already-have-a-account-login-span2">Login</span>
-          </span>
-        </div>
-      </div>
-    </div> {% endcomment %}
     <div class="log-in-page">
       <img class="ce-1569-f-55-f-1" src="{% static 'image/register/ce-1569-f-55-f-10.png' %}" />
       <div class="frame-1000000791">
-        {% comment %} <div class="line-4"></div>
-        <div class="line-41"></div>
-        <div class="line-5"></div>
-        <div class="line-6"></div>
-        <div class="line-7"></div> {% endcomment %}
         <div class="create-account">Create Account</div>
         <form method="post" action="{% url 'register' %}">
           {% csrf_token %}

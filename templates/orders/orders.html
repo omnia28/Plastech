@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/reservation/globals.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/reservation/styleguide.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/reservation/style.css' %}" />
+  </head>
+  <body>
+    <div class="reservation" data-model-id="34:1685">
+      <div class="div">
+        <form id="reservationForm" action="{% url 'orders' %}" method="POST">
+          {% csrf_token %}
+          <a href="{% url 'products' %}"><img class="line-arrow-right" src="https://c.animaapp.com/RrrvBP5P/img/line-arrow-right.svg" /></a>
+
+          <!-- Input Fields -->
+          <div class="group">
+            <input type="text" class="frame-9" placeholder=" " value="{{ request.user.first_name }}" readonly />
+            <input type="text" class="frame-10" placeholder=" " value="{{ request.user.last_name }}" readonly />
+            <input type="tel" class="frame-11" name="phone_number" placeholder="Enter Phone Number" />
+            <input type="text" class="frame-12" value="Egypt" required readonly />
+            <input type="text" class="frame-13" name="house_street" placeholder="House number and street name" required />
+            <input type="text" class="frame-18" name="apartment" placeholder="Apartment, suite, unit, etc." required />
+            <select name="governorate" class="frame-14" required>
+              <option value="" disabled selected>Select Governorate</option>
+              <option value="Cairo">Cairo</option>
+              <option value="Alexandria">Alexandria</option>
+              <option value="Giza">Giza</option>
+              <option value="Port Said">Port Said</option>
+              <option value="Suez">Suez</option>
+              <option value="Dakahlia">Dakahlia</option>
+              <option value="Sharqia">Sharqia</option>
+              <option value="Qalyubia">Qalyubia</option>
+              <option value="Kafr El Sheikh">Kafr El Sheikh</option>
+              <option value="Gharbia">Gharbia</option>
+              <option value="Monufia">Monufia</option>
+              <option value="Beheira">Beheira</option>
+              <option value="Ismailia">Ismailia</option>
+              <option value="Damietta">Damietta</option>
+              <option value="Fayoum">Fayoum</option>
+              <option value="Beni Suef">Beni Suef</option>
+              <option value="Minya">Minya</option>
+              <option value="Asyut">Asyut</option>
+              <option value="Sohag">Sohag</option>
+              <option value="Qena">Qena</option>
+              <option value="Luxor">Luxor</option>
+              <option value="Aswan">Aswan</option>
+              <option value="Red Sea">Red Sea</option>
+              <option value="New Valley">New Valley</option>
+              <option value="Matrouh">Matrouh</option>
+              <option value="North Sinai">North Sinai</option>
+              <option value="South Sinai">South Sinai</option>
+            </select>
+            <input type="number" min="1" max={{ product.stock_quantity }} id="quantity" name="quantity" class="frame-15" placeholder=" " required />
+            <input type="text" class="frame-16" placeholder="Notes about your order, e.g. special notes for delivery." />
+            <input type="number" class="frame-17" name="total_amount" id="total_amount" readonly/>
+
+            <div class="text-wrapper-9">First Name</div>
+            <div class="text-wrapper-10">Last Name</div>
+            <div class="text-wrapper-11">Phone Number</div>
+            <div class="text-wrapper-12">Country/Region*</div>
+            <div class="text-wrapper-13">Street Address*</div>
+            <div class="text-wrapper-14">City*</div>
+            <div class="text-wrapper-15">Quantity*</div>
+            <div class="text-wrapper-16">Order Notes (optional)</div>
+            <div class="text-wrapper-17">Total Amount</div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="overlap">
+            <button type="submit" class="button" id="submitButton">
+              <p class="p">
+                <span class="text-wrapper-19">Submit</span>
+              </p>
+            </button>
+            <img class="line-arrow-right-2" src="https://c.animaapp.com/RrrvBP5P/img/line-arrow-right-1.svg" />
+          </div>
+        </form>
+
+        <!-- Rest of the page content -->
+        <div class="payment-method-visa">
+          <img class="visa-logo" src="https://c.animaapp.com/RrrvBP5P/img/visa-logo.svg" />
+        </div>
+        <div class="text-wrapper-18">Payment Methods</div>
+        <div class="payment-method">
+          <div class="mastercard">
+            <div class="overlap-group">
+              <img class="right" src="https://c.animaapp.com/RrrvBP5P/img/right.svg" />
+              <img class="middle" src="https://c.animaapp.com/RrrvBP5P/img/middle.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="maestro-wrapper">
+          <div class="maestro">
+            <div class="overlap-group-2">
+              <img class="left" src="https://c.animaapp.com/RrrvBP5P/img/left-1.svg" />
+              <img class="right-2" src="https://c.animaapp.com/RrrvBP5P/img/right-1.svg" />
+              <img class="middle-2" src="https://c.animaapp.com/RrrvBP5P/img/middle-1.svg" />
+            </div>
+          </div>
+        </div>
+        <img class="payment-method-2" src="https://c.animaapp.com/RrrvBP5P/img/payment-method-paypal.svg" />
+
+        <!-- Footer -->
+        <div class="footer">
+          <div class="frame">
+            <div class="frame-2">
+              <div class="frame-3">
+                <p class="CONTACT-USCT">
+                  <span class="text-wrapper">CONTACT US</span> <span class="span">CT</span>
+                </p>
+                <div class="frame-4">
+                  <div class="frame-5">
+                    <img class="img" src="https://c.animaapp.com/RrrvBP5P/img/call.svg" />
+                    <div class="text-wrapper-2">+201276003504</div>
+                  </div>
+                  <div class="frame-6">
+                    <img class="img" src="https://c.animaapp.com/RrrvBP5P/img/location.svg" />
+                    <div class="text-wrapper-2">Alexandria , Egypt</div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-7">
+                <div class="text-wrapper-3">Follow Us:</div>
+                <div class="frame-5">
+                  <img class="img-2" src="https://c.animaapp.com/RrrvBP5P/img/linkedin.svg" />
+                  <img class="img-2" src="https://c.animaapp.com/RrrvBP5P/img/facebook.svg" />
+                  <img class="img-2" src="https://c.animaapp.com/RrrvBP5P/img/instagram.svg" />
+                  <img class="img-2" src="https://c.animaapp.com/RrrvBP5P/img/twitter.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="frame-8">
+              <div class="text-wrapper-4">About Us</div>
+              <div class="text-wrapper-5">Blogs</div>
+              <div class="text-wrapper-5">Results</div>
+              <div class="text-wrapper-6">Contact Us</div>
+            </div>
+          </div>
+          <img class="logo" src="https://c.animaapp.com/RrrvBP5P/img/logo@2x.png" />
+          <img class="logo-text" src="https://c.animaapp.com/RrrvBP5P/img/logo-text.png" />
+          <div class="text-wrapper-7">Together for Cleaner Waters.</div>
+        </div>
+
+        <div class="overlap-2">
+          <div class="about-us-section">
+            <div class="image-wrapper">
+              <img class="image" src="https://c.animaapp.com/RrrvBP5P/img/image-25.png" />
+            </div>
+          </div>
+          <div class="rectangle"></div>
+          <div class="text-wrapper-21">Reservation</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const price = {{ product.price }};
+      const quantityInput = document.getElementById('quantity');
+      const totalAmountInput = document.getElementById('total_amount');
+      function calculateTotal() {
+        const quantity = parseInt(quantityInput.value) || 0;
+        const total = quantity * price;
+        totalAmountInput.value = total.toFixed(2);  
+      }
+      quantityInput.addEventListener('input', calculateTotal);
+      calculateTotal();
+    </script>
+  </body>
+</html>

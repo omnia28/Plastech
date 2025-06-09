@@ -74,9 +74,6 @@
                           </div>
                         </div>
                       </div>
-                      {% comment %} <div>
-                        <a href="{% url 'logout' %}" class="logout">Logout</a>
-                      </div> {% endcomment %}
                     {% else %}
                       <div class="sign-up">
                         <div class="button">
@@ -94,8 +91,8 @@
               <div class="frame-50">
                 <div class="frame-47">
                   <div class="frame-48">
-                    <img class="logo4" src="{% static 'image/blogs/logo3.png' %}" />
-                    <img class="logo-text2" src="{% static 'image/blogs/logo-text1.png' %}" />
+                    <a href="{% url 'home' %}"><img class="logo4" src="{% static 'image/blogs/logo3.png' %}" /></a>
+                    <a href="{% url 'home' %}"><img class="logo-text2" src="{% static 'image/blogs/logo-text1.png' %}" /></a>
                   </div>
                 </div>
               </div>
@@ -105,13 +102,7 @@
       </div>
       <div class="about-us-section">
         <img class="about2" src="{% static 'image/blogs/about1.png' %}" />
-        <div class="frame-85">
-          <div class="search">
-            <div class="search-normal">
-              <img class="vuesax-linear-search-normal" src="{% static 'image/blogs/vuesax-linear-search-normal0.svg' %}" />
-            </div>
-          </div>
-        </div>
+        <div class="frame-85"></div>
         <div class="our-blog">Our Blog</div>
       </div>
 
@@ -120,11 +111,9 @@
           <div class="blog-card">
             <div class="frame-72">
               {% if article.urlToImage %}
-              <a href="{{ article.url }}" target="_blank">
-                <img class="image-1" src="{{ article.urlToImage }}" alt="{{ article.title }}" onerror="this.onerror=null; this.src='path/to/default-image.png';" /></a>
+                <a href="{{ article.url }}" target="_blank"><img class="image-1" src="{{ article.urlToImage }}" alt="{{ article.title }}" onerror="this.onerror=null; this.src='path/to/default-image.png';" /></a>
               {% else %}
-              <a href="{{ article.url }}" target="_blank">
-                <img src="{% static 'image/blogs/logo3.png' %}" style="background-color: white; object-fit: contain; width: 100%; height: 100%;" /></a>
+                <a href="{{ article.url }}" target="_blank"><img src="{% static 'image/blogs/logo3.png' %}" style="background-color: white; object-fit: contain; width: 100%; height: 100%;" /></a>
               {% endif %}
             </div>
             <div class="frame-77">
@@ -146,7 +135,6 @@
                   </div>
                 </div>
                 <div class="frame-74">
-                  {% comment %} <img class="image" src="{{ article.authorImageUrl|default:'path/to/default-author.png' }}" alt="{{ article.author|default:'Unknown Author' }}" onerror="this.onerror=null; this.src='path/to/default-author.png';" /> {% endcomment %}
                   <div class="frame-73">
                     <div class="joe-gerlad">{{ article.source.name }}</div>
                     <div class="_20-jan-2025">{{ article.publishedAt }}</div>
