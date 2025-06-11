@@ -42,9 +42,9 @@
           <div class="group">
             <div class="frame">{{ first_name }}</div>
             <div class="frame-2">{{ last_name }}</div>
-            <div class="div-wrapper">
+            <a href="{% url 'change_password' %}" style="text-decoration: none;" class="div-wrapper">
               <div class="text-wrapper-2">Change Password</div>
-            </div>
+            </a>
             <div class="frame-3">{{ email }}</div>
             <div class="frame-4">
               {% if phone_number %}

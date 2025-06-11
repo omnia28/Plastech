@@ -26,24 +26,19 @@
 
       <form class="main-form" action="{% url 'user_login' %}" method="POST">
         {% csrf_token %}
-        <div class="user-name">User Name</div>
+        <div class="user-name">Username</div>
         <div class="frame-102">{{ form.username }}</div>
 
         <div class="password">Password</div>
         <div class="frame-103">{{ form.password }}</div>
 
         <div class="forget-password">
-          <a href="#">Forget password?</a>
+          <a href="{% url 'password_reset' %}">Forget password?</a>
         </div>
 
         <div class="frame-105">
           <button type="submit" class="login" style="background:none; border:none; color:white; font-size:40px; font-family:'Montserrat-SemiBold'; cursor:pointer;">Login</button>
         </div>
-
-        <div class="or-sign-in-with">Or Sign in With</div>
-
-        <div class="ellipse-11"></div>
-        <div class="ellipse-12"></div>
 
         <div>
           <a href="{% url 'register' %}" class="new-user" style="text-decoration: none;">New User?</a>
