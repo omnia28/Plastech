@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "microplastic-detection",
+  "private_key_id": "9b2b3952263a4961e0e07f746d5a9ff392f3223c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpSbT8Foi9NjzE\nYUuPMjCbeFs9kz95lB44mTHlhJJdunz7lwzsoABL2J8TJy3xsrhxxHIdVimnQjge\n+7NREto/eZQ9ZUjP2iNLd+7Rr1916P6DiHNxvsrbBqXjLcDUqv3/8MhRNIX4DcsT\naaDgDYj2fG8kXBjM7Jkx2JpcrRhlOUzQM4RSBzWS+tGhjqKDMM8fOyiuqPh2Mtqh\nXzL7zAhigax7RTmZR1l92Dv52LUdDkzjE/BKREsvI1veoDJd3g9OX59xe8UrAApQ\nfktz/03Hr6ZlH5J2IVpKZdqtPxTMI4PLS0+8DXmi9RD2HjnHdNRa+jAT/Bh2wYPr\nAcC4aFVjAgMBAAECggEARcfmrRUC12/Qe6iZc1TeeW+SuJ6GRzDZhj4Ltc7AYJdb\nJn/8qVtI0/rek5AOXbdsVSUDXvlh4RqoNIlPQKeTRB/zDZ2+9kK2UskErfVq1Zkt\ntH1eDPB3APLMFYmKF3/GhKY1hFews2/IGl/rmv+pSeVAEQ5PgMU0Xroo4vPM/wgD\nmo2Ftfjpj0dFTfwQg2K49u2fM1B5qDW7tn5dUYzm8P4/Z1EHMtfFHz5TkmO8Vt3x\nDA26GdWrTqG7PyF/xwdX6u/CQsLbfb4f9Ux83oGyoIDiM7+rusWBxkyQbut2gCcB\nnsPtD/HKOnyfVUyf8QS3RYhVkkHE/Wff+/hXz0axCQKBgQDl9dYg1ig8d4INEVWU\nObXQ3ojiI4ILPJ1fN+b54hBXse535FIPgnHCPWlO+Iwap0rN4fv1ZzY+4Sce9ttt\n2PaNrDOwOuDzwF7AcVaoou4Fzy3lGOi18eD0uirO6xg3J2+sGluuUrab38EeHOoG\nuyhmswTgz1jrEWTV/7eCMOeYCwKBgQC8dRR15YRzFLUL3uzxApvn9nswJY8I2gLD\nupsTAs7EKPTiYtXIX+XKgmYiKmQEcWlM9aEe9Bh5ucYvi4EPSGuL09JOCeOn6x/D\naXG/0IH8wmpewF9UncASXM3FfblJShMxAOqXOImMkiZY0xxpUDDPtycS7SN+rF18\nZGeZdrEXCQKBgQDiZhf8mBtg/J+zUd+ZYP/ZtV26lg7QFUsylYz3c1N3oxwOOWF5\nF4n8HA3zy8vT6eRBsj0nLAhB+9VSLON30GVcsa7pz+3szPX8LRmOSWphmcmrhcyG\nZK5/AlJnCRn8Iv1UyVZ9170k1TQB+6GEIvrxsUoaMsluFN/buDjpGlDIZQKBgBTH\na/wb1GDD9bpbWBCy0vHekXKbkYvOTeO63YJZGucyBN45O40eVb3gZtZ5ihGbV5ru\nslcxXsl9HEb9wLsopwMB1fxYxssq95OaOrqFiO+PmB7eYyR3SEg+B0oxNI7KJheP\nHE6UI0ZmjufYTxelidw9O4ewseszohMnFu0q0xfRAoGAOeIN0UPA8OcQ3Luayhdg\nqFUXNIUSSEHuAEyVJlOYXhMgQgbNZuJQ8R0OnYwQdHmYiNAyMe3CkhWuiecA0KWu\nO1r3EL6yx4DQjAA7uIL3gOwXvZVSsDruoYgCL+tKEsKKfmGVCQtmOdCSFuXdvUST\nrfKQ7/+RkCzzDbYVTJsJ+Iw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@microplastic-detection.iam.gserviceaccount.com",
+  "client_id": "103492477341453094452",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40microplastic-detection.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

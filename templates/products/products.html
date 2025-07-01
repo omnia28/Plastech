@@ -65,7 +65,7 @@
               <div class="nav">
                 <div class="nav2">
                   <a href="{% url 'home' %}" class="home">Home</a>
-                  <div class="results">Results</div>
+                  <a href="{% url 'select_sensor' %}" class="results">Results</a>
                   <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
                   <a href="{% url 'products' %}" class="our-products">Products</a>
                   <a href="{% url 'about' %}" class="about">About</a>
@@ -148,24 +148,27 @@
             </div>
           </div>
           <div class="frame-46">
-            <div class="about-us">About</div>
-            <div class="blogs2">Blogs</div>
-            <div class="results2">Results</div>
-            <div class="contact-us">Contact</div>
+            <div>
+              <a href="{% url 'about' %}" class="about-us">About</a>
+            </div>
+            <a href="{% url 'blogs' %}" class="blogs2">Blogs</a>
+            <a href="{% url 'select_sensor' %}" class="results2">Results</a>
+            <div>
+              <a href="{% url 'contact' %}" class="contact-us">Contact</a>
+            </div>
           </div>
         </div>
         <img class="logo4" src="{% static 'image/products/logo3.png' %}" />
         <img class="logo-text2" src="{% static 'image/products/logo-text1.png' %}" />
         <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
       </div>
-      <div class="line-arrow-right">
-      </div>
+      <div class="line-arrow-right"></div>
       <div class="button">
         <a href="{% url 'orders' %}" class="button2">Reservation</a>
       </div>
-      <div class="button3">
+      {% comment %} <div class="button3">
         <div class="button4">Read More</div>
-      </div>
+      </div> {% endcomment %}
       {% for product in products %}
         <img class="image-20" src="{{ product.image.url }}" />
       {% endfor %}
@@ -174,7 +177,11 @@
     <script>
       function toggleDropdown() {
         const menu = document.getElementById('dropdown-menu')
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block'
+        if (menu.style.display === 'block') {
+          menu.style.display = 'none'
+        } else {
+          menu.style.display = 'block'
+        }
       }
       
       document.addEventListener('click', function (event) {

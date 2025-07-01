@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .reservation .div {
@@ -754,7 +755,7 @@
 
 .reservation .about-us-section {
   position: absolute;
-  width: 1300px;
+  width: 1250px;
   height: 207px;
   top: 0;
   left: 0;
@@ -784,7 +785,7 @@
   width: 809px;
   height: 127px;
   top: 102px;
-  left: 235px;
+  left: 215px;
   background-color: var(--primary-400);
   border-radius: 16px;
 }
@@ -793,7 +794,7 @@
   position: absolute;
   height: 64px;
   top: 133px;
-  left: 438px;
+  left: 418px;
   font-family: var(--headings-h1-font-family);
   font-weight: var(--headings-h1-font-weight);
   color: #ffffff;

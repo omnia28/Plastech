@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Microplastic Dashboard</title>
+  </head>
+  <body>
+    <h1>Sensor Data</h1>
+    <pre>{{ raw }}</pre>
+    <h2>Classification Result: {{ classification }}</h2>
+    <h2>Regression Result: {{ regression }}</h2>
+    <h3>Sensor ID: {{ sensor_id }}</h3>
+
+    {% if input_type == 'manual' %}
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>pH:</label>
+      <input type="text" name="pH"><br>
+
+      <label>Temperature:</label>
+      <input type="text" name="temperature"><br>
+
+      <label>Turbidity NTU:</label>
+      <input type="text" name="turbidity_NTU"><br>
+
+      <label>Turbidity Voltage:</label>
+      <input type="text" name="turbidity_Voltage"><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    {% endif %}
+  </body>
+</html>

@@ -37,5 +37,6 @@ class OrderItem(models.Model):
 class AssignedProduct(models.Model):
     order_item = models.ForeignKey(OrderItem, on_delete=models.CASCADE)
     unique_product_id = models.CharField(max_length=100, unique=True)
+    actual_product_id = models.CharField(max_length=100, default='sensor_id_1')
     result_url = models.URLField(blank=True, null=True)
     assigned_at = models.DateTimeField(auto_now=True)

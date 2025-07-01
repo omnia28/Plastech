@@ -54,6 +54,7 @@
     flex-shrink: 0;
     width: 182px;
     position: relative;
+    left: -50px;
 }
 
 .contact-usct {
@@ -188,6 +189,7 @@
     width: 183px;
     height: 86px;
     position: relative;
+    left: -50px;
 }
 
 .follow-us {
@@ -258,6 +260,7 @@
     flex-shrink: 0;
     width: 78px;
     position: relative;
+    left: -50px;
 }
 
 .about-us {
@@ -317,7 +320,7 @@
     width: 94px;
     height: 76px;
     position: absolute;
-    left: 127px;
+    left: 77px;
     top: 13px;
     object-fit: cover;
 }
@@ -327,7 +330,7 @@
     width: 520px;
     height: 75px;
     position: absolute;
-    left: 150px;
+    left: 100px;
     top: 127px;
     object-fit: cover;
 }
@@ -346,7 +349,7 @@
     line-height: 100%;
     font-weight: 700;
     position: absolute;
-    left: 140px;
+    left: 90px;
     top: 97px;
     display: flex;
     align-items: center;
@@ -363,7 +366,6 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    overflow: hidden;
 }
 
 .header2 {
@@ -374,7 +376,6 @@
     position: absolute;
     left: 13px;
     top: 25px;
-    overflow: hidden;
 }
 
 .frame-52 {
@@ -533,6 +534,7 @@
         transform: translateY(0);
     }
 }
+
 .results2::after {
     content: "";
     position: absolute;
@@ -572,6 +574,7 @@
         transform: translateY(0);
     }
 }
+
 .blogs3::after {
     content: "";
     position: absolute;
@@ -611,6 +614,7 @@
         transform: translateY(0);
     }
 }
+
 .our-products::after {
     content: "";
     position: absolute;
@@ -650,6 +654,7 @@
         transform: translateY(0);
     }
 }
+
 .about::after {
     content: "";
     position: absolute;
@@ -1180,6 +1185,7 @@
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
+    top: 30px;
 }
 
 .profile-circle {
@@ -1188,6 +1194,7 @@
     height: 48px;
     position: relative;
     overflow: visible;
+    left: 20px;
 }
 
 .frame-801 {
@@ -1208,6 +1215,8 @@
     flex-shrink: 0;
     width: 208px;
     position: relative;
+    top: -13px;
+    left: 20px;
 }
 
 .vuesax-linear-profile-circle2 {
@@ -1249,4 +1258,37 @@
     left: -20px;
     top: 0px;
     overflow: visible;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }

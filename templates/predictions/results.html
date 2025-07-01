@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/results/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/results/vars.css' %}" />
+  </head>
+  <body>
+    <div class="results">
+      <div class="header">
+        <div class="frame-52">
+          <div class="logo">
+            <div class="frame-53"></div>
+          </div>
+        </div>
+        <div class="logo2">
+          <div class="frame-49">
+            <div class="frame-50">
+              <div class="frame-47">
+                <div class="frame-48">
+                  <a href="{% url 'home' %}"><img class="logo3" src="{% static 'image/results/logo2.png' %}" /></a>
+                  <a href="{% url 'home' %}"><img class="logo-text" src="{% static 'image/results/logo-text0.png' %}" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header2">
+          <div class="frame-51">
+            <div class="frame-492">
+              <div class="nav">
+                <div class="nav2">
+                  <a href="{% url 'home' %}" class="home" style="text-decoration: none;">Home</a>
+                  <a href="{% url 'select_sensor' %}" class="results2" style="text-decoration: none;">Results</a>
+                  <a href="{% url 'blogs' %}" class="blogs" style="text-decoration: none;">Blogs</a>
+                  <a href="{% url 'products' %}" class="our-products" style="text-decoration: none;">Products</a>
+                  <a href="{% url 'about' %}" class="about" style="text-decoration: none;">About</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sign-up">
+          <div class="frame-83">
+            <div class="vuesax-linear-profile-circle">
+              <img class="profile-circle" src="{% static 'image/results/profile-circle0.svg' %}" />
+            </div>
+            <div class="frame-80">
+              <div class="frame-81">
+                <div class="vuesax-linear-profile-circle2">
+                  <div class="account-name">ACCOUNT NAME</div>
+                </div>
+                <div class="arrow-down">
+                  <img class="vuesax-bold-arrow-down" src="{% static 'image/results/vuesax-bold-arrow-down0.svg' %}" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="frame-54">
+          <div class="frame-45">
+            <div class="frame-41">
+              <div class="contact-usct">
+                <span>
+                  <span class="contact-usct-span">CONTACT US</span>
+                  <span class="contact-usct-span2">CT</span>
+                </span>
+              </div>
+              <div class="frame-40">
+                <div class="frame-39">
+                  <div class="call">
+                    <img class="vuesax-linear-call" src="{% static 'image/results/vuesax-linear-call0.svg' %}" />
+                  </div>
+                  <div class="_201276003504">+201276003504</div>
+                </div>
+                <div class="frame-38">
+                  <div class="location">
+                    <img class="vuesax-bold-location" src="{% static 'image/results/vuesax-bold-location0.svg' %}" />
+                  </div>
+                  <div class="alexandria-egypt">Alexandria , Egypt</div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-44">
+              <div class="follow-us">Follow Us:</div>
+              <div class="frame-42">
+                <img class="linkedin" src="{% static 'image/results/linkedin0.svg' %}" />
+                <img class="facebook" src="{% static 'image/results/facebook0.svg' %}" />
+                <img class="instagram" src="{% static 'image/results/instagram0.svg' %}" />
+                <img class="twitter" src="{% static 'image/results/twitter0.svg' %}" />
+              </div>
+            </div>
+          </div>
+          <div class="frame-46">
+            <a href="{% url 'about' %}" class="about-us">About Us</a>
+            <a href="{% url 'blogs' %}" class="blogs2">Blogs</a>
+            <a href="{% url 'select_sensor' %}" class="results3">Results</a>
+            <a href="{% url 'contact' %}" class="contact-us">Contact Us</a>
+          </div>
+        </div>
+        <img class="logo4" src="{% static 'image/results/logo3.png' %}" />
+        <img class="logo-text2" src="{% static 'image/results/logo-text1.png' %}" />
+        <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
+      </div>
+      {% if show_form %}
+        <form method="POST" class="custom-form">
+          {% csrf_token %}
+          <input type="text" name="pH" placeholder="pH" required />
+          <input type="text" name="temperature" placeholder="Temperature" required />
+          <input type="text" name="turbidity_NTU" placeholder="Turbidity NTU" required />
+          <input type="text" name="turbidity_Voltage" placeholder="Turbidity Voltage" required />
+          <button type="submit">Submit</button>
+        </form>
+      {% else %}
+        <div class="base">
+          <div class="_5-c">5°C</div>
+          <div class="_15-c">15°C</div>
+          <div class="_25-c">25°C</div>
+          <div class="_35-c">35°C</div>
+          <div class="_45-c">45°C</div>
+          <div class="line-1"></div>
+          <div class="creativity">
+            <img class="line-2" src="{% static 'image/results/line-20.svg' %}" />
+            <div class="frame-3">
+              <div class="content">
+                <div class="tooltip">{{ raw.temperature|default:'--' }}°C</div>
+                <div class="_2-50-pm"></div>
+              </div>
+              <img class="arrow" src="{% static 'image/results/arrow0.svg' %}" />
+            </div>
+            <div class="temperature">Temperature</div>
+            <img class="chart" src="{% static 'image/results/chart0.svg' %}" />
+            <img class="chart2" src="{% static 'image/results/chart1.svg' %}" />
+            <img class="icon-button" src="{% static 'image/results/icon-button0.svg' %}" />
+            <div class="ellipse-1"></div>
+            <div class="frame">
+              <img class="svg-repo-icon-carrier" src="{% static 'image/results/svg-repo-icon-carrier0.svg' %}" />
+            </div>
+          </div>
+        </div>
+        <div class="base2">
+          <div class="_0">0</div>
+          <div class="_2">2</div>
+          <div class="_4">4</div>
+          <div class="_6">6</div>
+          <div class="_8">8</div>
+          <div class="creativity">
+            <div class="frame-32">
+              <div class="content">
+                <div class="tooltip">{{ raw.ph|default:'--' }}</div>
+                {% comment %} <div class="_2-50-pm">2:50 PM</div> {% endcomment %}
+              </div>
+              <img class="arrow2" src="{% static 'image/results/arrow1.svg' %}" />
+            </div>
+            <div class="p-h">pH</div>
+            <img class="icon-button2" src="{% static 'image/results/icon-button1.svg' %}" />
+          </div>
+          <div class="base3"></div>
+          <div class="base4"></div>
+          <div class="base5"></div>
+          <div class="base6"></div>
+          <div class="base7"></div>
+          <div class="base8"></div>
+          <div class="base9"></div>
+          <div class="base10"></div>
+          <div class="base11"></div>
+          <div class="base12"></div>
+          <div class="base13"></div>
+          <div class="base14"></div>
+          <div class="base15"></div>
+          <div class="layer-1">
+            <img class="svg-repo-icon-carrier2" src="{% static 'image/results/svg-repo-icon-carrier1.svg' %}" />
+          </div>
+        </div>
+        <div class="base16">
+          <div class="creativity">
+            <img class="frame-33" src="{% static 'image/results/frame-32.svg' %}" />
+            <div class="voltage">Voltage</div>
+            <img class="icon-button3" src="{% static 'image/results/icon-button2.svg' %}" />
+            <div class="ellipse-89"></div>
+            <div class="_4-5">{{ raw.turbidity_voltage|default:'--' }}</div>
+            <div class="total-voltages">Total voltages</div>
+            <div class="frame-59">
+              <div class="_5-3-volts">{{ raw.turbidity_voltage|default:'--' }}</div>
+              <div class="max">Turbidity Voltage</div>
+            </div>
+          </div>
+          <div class="frame-58">
+            <div class="_5-3-volts">{{ raw.turbidity_ntu|default:'--' }}</div>
+            <div class="min">Turbidity NTU</div>
+          </div>
+          <div class="frame2">
+            <img class="svg-repo-icon-carrier3" src="{% static 'image/results/svg-repo-icon-carrier2.svg' %}" />
+          </div>
+        </div>
+        <div class="base17">
+          <div class="group-1000000788">
+            <div class="user-03-c">
+              <div class="plastic-bottle">
+                <img class="svg-repo-icon-carrier4" src="{% static 'image/results/svg-repo-icon-carrier3.svg' %}" />
+              </div>
+            </div>
+            <img class="ellipse-1074" src="{% static 'image/results/ellipse-10740.svg' %}" />
+            <img class="ellipse-1075" src="{% static 'image/results/ellipse-10750.svg' %}" />
+            <img class="ellipse-1078" src="{% static 'image/results/ellipse-10780.svg' %}" />
+          </div>
+          <div class="group-1000000789">
+            <div class="group-1000000785">
+              <div class="ellipse-10782"></div>
+              <div class="presence">Presence</div>
+              <div class="yes">{{ classification }}</div>
+            </div>
+            <div class="group-1000000786">
+              <div class="ellipse-1079"></div>
+              <div class="type">Concentration</div>
+              <div class="pp">{{ regression }}</div>
+            </div>
+            <div class="group-1000000787">
+              {% comment %} <div class="ellipse-10792"></div>
+              <div class="concentration">Concentration</div>
+              <div class="_32-0-particle">{{ regression }}</div> {% endcomment %}
+            </div>
+          </div>
+          <img class="ellipse-1080" src="{% static 'image/results/ellipse-10800.svg' %}" />
+          <img class="ellipse-1081" src="{% static 'image/results/ellipse-10810.svg' %}" />
+          <img class="ellipse-1082" src="{% static 'image/results/ellipse-10820.svg' %}" />
+          <div class="frame-1000000790">
+            {% comment %} <div class="_2-00-pm-sept-25">2:00 pm-Sept 25</div> {% endcomment %}
+            <img class="icon-arrow-down" src="{% static 'image/results/icon-arrow-down0.svg' %}" />
+          </div>
+          <img class="frame-34" src="{% static 'image/results/frame-33.svg' %}" />
+          <div class="results4">Results</div>
+        </div>
+        <button class="button">
+          <div class="button2"></div>
+        </button>
+        <div class="retest">Retest</div>
+      {% endif %}
+    </div>
+    <script>
+      document.querySelector('.button').addEventListener('click', function (e) {
+        e.preventDefault()
+      
+        const inputType = '{{ input_type }}'
+      
+        if (inputType === 'manual') {
+          window.location.href = "{% url 'dashboard' %}?show_form=1"
+        } else if (inputType === 'firebase') {
+          window.location.reload()
+        }
+      })
+    </script>
+  </body>
+</html>

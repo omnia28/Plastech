@@ -5,7 +5,7 @@
 
 .about-page {
   background: #ffffff;
-  height: 3616px;
+  height: 2716px;
   position: relative;
   overflow: hidden;
 }
@@ -20,7 +20,6 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  overflow: hidden;
 }
 
 .header2 {
@@ -31,7 +30,6 @@
   position: absolute;
   left: 20px;
   top: 20px;
-  overflow: hidden;
 }
 
 .frame-52 {
@@ -629,6 +627,7 @@
   flex-shrink: 0;
   width: 182px;
   position: relative;
+  left: -50px;
 }
 
 .contact-usct {
@@ -763,6 +762,7 @@
   width: 183px;
   height: 86px;
   position: relative;
+  left: -50px;
 }
 
 .follow-us {
@@ -833,6 +833,7 @@
   flex-shrink: 0;
   width: 78px;
   position: relative;
+  left: -50px;
 }
 
 .about-us2 {
@@ -892,7 +893,7 @@
   width: 94px;
   height: 76px;
   position: absolute;
-  left: 127px;
+  left: 77px;
   top: 13px;
   object-fit: cover;
 }
@@ -902,7 +903,7 @@
   width: 520px;
   height: 75px;
   position: absolute;
-  left: 150px;
+  left: 100px;
   top: 127px;
   object-fit: cover;
 }
@@ -921,7 +922,7 @@
   line-height: 100%;
   font-weight: 700;
   position: absolute;
-  left: 140px;
+  left: 90px;
   top: 97px;
   display: flex;
   align-items: center;
@@ -1317,6 +1318,7 @@
   flex-shrink: 0;
   width: 208px;
   position: relative;
+  top: -13px;
 }
 
 .vuesax-linear-profile-circle2 {
@@ -1329,6 +1331,15 @@
   width: 173px;
   position: relative;
   margin-left: 20px;
+}
+
+.profile-circle {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  overflow: visible;
+  left: 30px;
 }
 
 .account-name {
@@ -1358,4 +1369,37 @@
   left: -20px;
   top: 0px;
   overflow: visible;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }

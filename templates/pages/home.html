@@ -59,7 +59,7 @@
                           <a href="{% url 'home' %}" class="home">Home</a>
                         </div>
                         <div class="results">
-                          <a class="results">Results</a>
+                          <a href="{% url 'select_sensor' %}" class="results">Results</a>
                         </div>
                         <div>
                           <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
@@ -84,16 +84,18 @@
                               <a href="{% url 'user_profile' %}"><img class="profile-circle" src="{% static 'image/products/profile-circle0.svg' %}" /></a>
                               <div class="account-name">{{ user.username }}</div>
                             </div>
-                            <div class="arrow-down">
-                              <img class="vuesax-bold-arrow-down" src="{% static 'image/contact/vuesax-bold-arrow-down0.svg' %}" />
+                            <div class="dropdown-container">
+                              <div class="arrow-down" onclick="toggleDropdown()">
+                                <img class="vuesax-bold-arrow-down" src="{% static 'image/products/vuesax-bold-arrow-down0.svg' %}" style="cursor: pointer;" />
+                              </div>
+                              <div id="dropdown-menu" class="dropdown-menu">
+                                <a href="{% url 'logout' %}">Logout</a>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    {% comment %} <div>
-                      <a href="{% url 'logout' %}" class="logout">Logout</a>
-                    </div> {% endcomment %}
                   {% else %}
                     <div class="sign-up">
                       <div class="button">
@@ -171,10 +173,10 @@
           </div>
           <div class="frame-46">
             <div>
-              <a href="{% url 'about' %}" class="about-us">About Us</a>
+              <a href="{% url 'about' %}" class="about-us">About</a>
             </div>
             <a href="{% url 'blogs' %}" class="blogs2">Blogs</a>
-            <div class="results2">Results</div>
+            <a href="{% url 'select_sensor' %}" class="results2">Results</a>
             <div>
               <a href="{% url 'contact' %}" class="contact-us">Contact</a>
             </div>
@@ -285,5 +287,23 @@
         </div>
       </div>
     </div>
+    <script>
+      function toggleDropdown() {
+        const menu = document.getElementById('dropdown-menu')
+        if (menu.style.display === 'block') {
+          menu.style.display = 'none'
+        } else {
+          menu.style.display = 'block'
+        }
+      }
+      
+      document.addEventListener('click', function (event) {
+        const dropdown = document.getElementById('dropdown-menu')
+        const arrow = document.querySelector('.arrow-down')
+        if (!arrow.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.style.display = 'none'
+        }
+      })
+    </script>
   </body>
 </html>

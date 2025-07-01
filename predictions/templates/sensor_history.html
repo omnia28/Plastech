@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sensor History</title>
+  </head>
+  <body>
+    <h2>Sensor ID: {{ sensor_id }}</h2>
+    {% if readings %}
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>pH</th>
+        <th>Temperature</th>
+        <th>Turbidity (NTU)</th>
+        <th>Turbidity Voltage</th>
+      </tr>
+      {% for reading in readings %}
+      <tr>
+        <td>{{ reading.timestamp }}</td>
+        <td>{{ reading.ph }}</td>
+        <td>{{ reading.temperature }}</td>
+        <td>{{ reading.turbidity_ntu }}</td>
+        <td>{{ reading.turbidity_voltage }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>No readings found for this sensor.</p>
+    {% endif %}
+  </body>
+</html>

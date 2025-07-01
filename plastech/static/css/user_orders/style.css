@@ -855,3 +855,44 @@
     pointer-events: all;
     position: relative;
   }
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 30px; 
+  right: 40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 99999; 
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.vuesax-bold-arrow-down {
+  height: auto;
+  position: absolute;
+  left: -20px;
+  top: 0px;
+  overflow: visible;
+}

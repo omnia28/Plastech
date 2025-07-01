@@ -52,7 +52,7 @@
                       <div class="nav">
                         <div class="nav2">
                           <a href="{% url 'home' %}" class="home">Home</a>
-                          <div class="results">Results</div>
+                          <a href="{% url 'select_sensor' %}" class="results">Results</a>
                           <a href="{% url 'blogs' %}" class="blogs">Blogs</a>
                           <a href="{% url 'products' %}" class="our-products">Products</a>
                           <a href="{% url 'about' %}" class="about">About</a>
@@ -67,10 +67,16 @@
                           <div class="frame-801">
                             <div class="frame-81">
                               <div class="vuesax-linear-profile-circle2">
-                                <a href="{% url 'user_profile' %}" class="account-name">{{ user.username }}</a>
+                                <a href="{% url 'user_profile' %}"><img class="profile-circle" src="{% static 'image/products/profile-circle0.svg' %}"  /></a>
+                                <div class="account-name">{{ user.username }}</div>
                               </div>
-                              <div class="arrow-down">
-                                <img class="vuesax-bold-arrow-down" src="{% static 'image/contact/vuesax-bold-arrow-down0.svg' %}" />
+                              <div class="dropdown-container">
+                                <div class="arrow-down" onclick="toggleDropdown()">
+                                  <img class="vuesax-bold-arrow-down" src="{% static 'image/products/vuesax-bold-arrow-down0.svg' %}" style="cursor: pointer;" />
+                                </div>
+                                <div id="dropdown-menu" class="dropdown-menu">
+                                  <a href="{% url 'logout' %}">Logout</a>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -157,17 +163,21 @@
             </div>
           </div>
           <div class="frame-46">
-            <div class="about-us2">About Us</div>
-            <div class="blogs2">Blogs</div>
-            <div class="results2">Results</div>
-            <div class="contact-us">Contact Us</div>
+            <div>
+              <a href="{% url 'about' %}" class="about-us2">About</a>
+            </div>
+            <a href="{% url 'blogs' %}" class="blogs2">Blogs</a>
+            <a href="{% url 'select_sensor' %}" class="results2">Results</a>
+            <div>
+              <a href="{% url 'contact' %}" class="contact-us">Contact</a>
+            </div>
           </div>
         </div>
         <img class="logo4" src="{% static 'image/about/logo3.png' %}" />
         <img class="logo-text2" src="{% static 'image/about/logo-text1.png' %}" />
         <div class="together-for-cleaner-waters">Together for Cleaner Waters.</div>
       </div>
-      <div class="meet-our-team">
+      {% comment %} <div class="meet-our-team">
         <img class="ce-1569-f-55-f-1" src="ce-1569-f-55-f-10.png" />
         <div class="meet-our-team2">Meet Our Team</div>
         <div class="partner-with-our-team-of-scientists-thinkers-and-industry-experts-to-take-your-talent-strategy-to-the-next-level-we-have-consulted-with-the-world-s-top-minds-and-created-innovative-solutions-that-transform-talent">Partner with our team of scientists, thinkers and industry experts to take your talent strategy to the next level. We have consulted with the world&#039;s top minds and created innovative solutions that transform talent</div>
@@ -195,7 +205,7 @@
         <div class="image9">
           <img class="image2" src="{% static 'image/about/image15.png' %}" />
         </div>
-      </div>
+      </div> {% endcomment %}
       <div class="frame-13">
         <div class="frame-10">
           <img class="image-3" src="{% static 'image/about/image-30.png' %}" />
@@ -221,5 +231,23 @@
       </div>
       <div class="how-it-works2">How It Works</div>
     </div>
+    <script>
+      function toggleDropdown() {
+        const menu = document.getElementById('dropdown-menu')
+        if (menu.style.display === 'block') {
+          menu.style.display = 'none'
+        } else {
+          menu.style.display = 'block'
+        }
+      }
+      
+      document.addEventListener('click', function (event) {
+        const dropdown = document.getElementById('dropdown-menu')
+        const arrow = document.querySelector('.arrow-down')
+        if (!arrow.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.style.display = 'none'
+        }
+      })
+    </script>
   </body>
 </html>

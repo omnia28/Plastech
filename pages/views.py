@@ -20,7 +20,7 @@ def contact(request):
     return render(request, 'pages/contact.html', {'form': form})
 
 def fetch_water_pollution_articles():
-    url = f"https://newsapi.org/v2/everything?q=microplastic&apiKey=bb9946e024434e8db8c71615d0368f32"
+    url = f"https://newsapi.org/v2/everything?q=microplastic%20NOT%20HiLIFE%20NOT%20dusters%20NOT%20PS5&apiKey=bb9946e024434e8db8c71615d0368f32"
     response = requests.get(url)
     if response.status_code == 200:
         return response.json().get("articles", [])
